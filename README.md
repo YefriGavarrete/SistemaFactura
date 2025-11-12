@@ -94,4 +94,3 @@ Contacto / revisión
 ---
 
 Archivo inicial sugerido: crear `README.md` en la raíz del proyecto con este contenido.
-
