@@ -49,3 +49,24 @@ C:\Users\ADMIN\OneDrive\Escritorio\UCENM\IX Period\SistemaFacturacion-main\Siste
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\IX Period\SistemaFacturacion-main\SistemaFacturacion-main\Sistema_GestionFacturacion\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\IX Period\SistemaFacturacion-main\SistemaFacturacion-main\Sistema_GestionFacturacion\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.exe
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\IX Period\SistemaFacturacion-main\SistemaFacturacion-main\Sistema_GestionFacturacion\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.pdb
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\bin\Debug\Sistema_GestionFacturacion.exe.config
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\bin\Debug\Sistema_GestionFacturacion.exe
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\bin\Debug\Sistema_GestionFacturacion.pdb
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.csproj.AssemblyReference.cache
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.exe.config
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormCargos.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormCategorias.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormDescuentos.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormEmpleado.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormMenu.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormPedidos.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormRoles.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormUsuariosLogin.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.Login.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Logica_CRUD.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Properties.Resources.resources
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.csproj.GenerateResource.cache
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.csproj.CoreCompileInputs.cache
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.exe
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.pdb
+C:\Users\braya\Source\Repos\SistemaFactura\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormBuscarProductos.resources
