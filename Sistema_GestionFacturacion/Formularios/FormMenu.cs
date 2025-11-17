@@ -18,20 +18,23 @@ namespace Sistema_GestionFacturacion.Formularios
         AlertasDelSistema Alertas = new AlertasDelSistema();
         ConsultasSQL Consultas = new ConsultasSQL();
         Conexion conexion = new Conexion();
-        string rol;
-        string nombre;
-        string apellido;
+
+        int idUsuario;
+        string rolUsuario;
+        string nombreUsuario;
+        string apellidoUsuario;
 
         public FormMenu()
         {
             InitializeComponent();
             InhabilitarButtons(); 
         }
-        public FormMenu(string rol, string nombre, string apellido) : this()
+        public FormMenu(int id, string rol, string nombre, string apellido) : this()
         {
-            rol = rol ?? string.Empty;
-            nombre = nombre ?? string.Empty;
-            apellido = apellido ?? string.Empty;
+            idUsuario = id;
+            rolUsuario = rol ?? string.Empty;
+            nombreUsuario = nombre ?? string.Empty;
+            apellidoUsuario = apellido ?? string.Empty;
             this.IsMdiContainer = true;
             bienvenidaUsuario(nombre, apellido, rol);
             configuracionRol(rol);
@@ -215,7 +218,8 @@ namespace Sistema_GestionFacturacion.Formularios
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            var pedidos = new FormPedidos(nombre, apellido);   
+            //var pedidos = new FormPedidos(nombre, apellido);
+            var pedidos = new FormPedidos(idUsuario, rolUsuario, nombreUsuario, apellidoUsuario);
             AbrirFormHijo(pedidos);
         }
 

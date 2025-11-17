@@ -97,7 +97,7 @@ namespace Sistema_GestionFacturacion.Formularios
                         string nombre = reader["Nombre"] != DBNull.Value ? reader["Nombre"].ToString() : string.Empty;
                         string apellido = reader["Apellido"] != DBNull.Value ? reader["Apellido"].ToString() : string.Empty;
                         string rolNombre = reader["RolNombre"] != DBNull.Value ? reader["RolNombre"].ToString() : string.Empty;
-
+                        int idUsuario = reader["IdUsuario"] != DBNull.Value ? Convert.ToInt32(reader["IdUsuario"]) : 0;
                         Alertas.Realizado("Inicio de sesión exitoso.");
 
                         // Abrir formulario según rol
@@ -105,7 +105,7 @@ namespace Sistema_GestionFacturacion.Formularios
                         {
                             try
                             {
-                                var menu = new FormMenu(rolNombre, nombre, apellido);
+                                var menu = new FormMenu(idUsuario, rolNombre, nombre, apellido);
                                 menu.StartPosition = FormStartPosition.CenterScreen;
                                 menu.Show();
 
@@ -121,7 +121,7 @@ namespace Sistema_GestionFacturacion.Formularios
                         {
                             try
                             {
-                                var menu = new FormMenu(rolNombre, nombre, apellido);
+                                var menu = new FormMenu(idUsuario, rolNombre, nombre, apellido);
                                 menu.StartPosition = FormStartPosition.CenterScreen;
                                 menu.Show();
 
@@ -138,7 +138,7 @@ namespace Sistema_GestionFacturacion.Formularios
                             try
                             {
                                 // Abrir FormularioPedidos 
-                                var pedidos = new FormPedidos(nombre, apellido);
+                                var pedidos = new FormPedidos(idUsuario, rolNombre, nombre, apellido);
                                 this.Hide();
                                 pedidos.Show();
                             }

@@ -128,5 +128,34 @@ namespace Sistema_GestionFacturacion.Clases
 
             return filasAfectadas;
         }
+
+        // Consulta SELECT generica para obtener datos de la BDD
+        public DataTable EjecutarConsultaSelect(string consulta)
+        {
+            DataTable resultados = new DataTable();
+
+            try
+            {
+                using (SqlCommand comando = new SqlCommand(consulta, SQLConexion))
+                {
+                    abrirConexion();
+
+                    using (SqlDataReader lector = comando.ExecuteReader())
+                    {
+                        resultados.Load(lector);
+                    }
+                }
+            }
+            catch (SqlException error)
+            {
+                Alertas.Advertencia($"Error al ejecutar consulta SELECT:\n{error.Message}");
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+
+            return resultados;
+        }
     }
 }
