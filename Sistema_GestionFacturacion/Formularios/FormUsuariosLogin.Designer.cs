@@ -420,7 +420,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormUsuariosLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUsuariosLogin";
             this.Load += new System.EventHandler(this.FormUsuariosLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

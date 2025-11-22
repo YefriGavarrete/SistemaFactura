@@ -4,6 +4,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 
 
 
@@ -15,6 +17,7 @@ namespace Sistema_GestionFacturacion.Formularios
         Conexion conexion = new Conexion();
         AlertasDelSistema Alertas = new AlertasDelSistema();
 
+        
         public Login()
         {
             InitializeComponent();
@@ -222,6 +225,7 @@ namespace Sistema_GestionFacturacion.Formularios
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             IniciarSesion();
+
         }
     }
 }

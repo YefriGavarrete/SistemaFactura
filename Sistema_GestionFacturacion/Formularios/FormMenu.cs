@@ -27,7 +27,7 @@ namespace Sistema_GestionFacturacion.Formularios
         public FormMenu()
         {
             InitializeComponent();
-            InhabilitarButtons(); 
+            InhabilitarButtons();
         }
         public FormMenu(int id, string rol, string nombre, string apellido) : this()
         {
@@ -233,6 +233,12 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             var usuarios = new FormUsuariosLogin();
             AbrirFormHijo(usuarios);
+        }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            FormProcesarPago frm = new FormProcesarPago();
+            frm.Show(); // o frm.ShowDialog(); si quieres que bloquee hasta que se cierre
         }
     }
 }

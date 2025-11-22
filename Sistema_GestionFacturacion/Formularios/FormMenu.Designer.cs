@@ -37,11 +37,12 @@
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnFacturar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCargos
             // 
-            this.btnCargos.Location = new System.Drawing.Point(87, 55);
+            this.btnCargos.Location = new System.Drawing.Point(99, 123);
             this.btnCargos.Name = "btnCargos";
             this.btnCargos.Size = new System.Drawing.Size(205, 61);
             this.btnCargos.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             // btnPedidos
             // 
-            this.btnPedidos.Location = new System.Drawing.Point(352, 189);
+            this.btnPedidos.Location = new System.Drawing.Point(349, 208);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(205, 61);
             this.btnPedidos.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // btnEmpleado
             // 
-            this.btnEmpleado.Location = new System.Drawing.Point(87, 189);
+            this.btnEmpleado.Location = new System.Drawing.Point(99, 208);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(205, 61);
             this.btnEmpleado.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             // btnDescuento
             // 
-            this.btnDescuento.Location = new System.Drawing.Point(644, 55);
+            this.btnDescuento.Location = new System.Drawing.Point(349, 377);
             this.btnDescuento.Name = "btnDescuento";
             this.btnDescuento.Size = new System.Drawing.Size(205, 61);
             this.btnDescuento.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             // btnCategorias
             // 
-            this.btnCategorias.Location = new System.Drawing.Point(352, 55);
+            this.btnCategorias.Location = new System.Drawing.Point(349, 123);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(205, 61);
             this.btnCategorias.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             // btnRoles
             // 
-            this.btnRoles.Location = new System.Drawing.Point(644, 189);
+            this.btnRoles.Location = new System.Drawing.Point(349, 296);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Size = new System.Drawing.Size(205, 61);
             this.btnRoles.TabIndex = 5;
@@ -101,7 +102,7 @@
             // 
             // btnUsuarios
             // 
-            this.btnUsuarios.Location = new System.Drawing.Point(87, 300);
+            this.btnUsuarios.Location = new System.Drawing.Point(99, 296);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(205, 61);
             this.btnUsuarios.TabIndex = 6;
@@ -111,7 +112,7 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(1193, 12);
+            this.btnRegresar.Location = new System.Drawing.Point(596, 20);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(107, 33);
             this.btnRegresar.TabIndex = 7;
@@ -122,17 +123,32 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(93, 20);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(54, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(82, 24);
             this.lblUsuario.TabIndex = 8;
             this.lblUsuario.Text = "Usuario";
+            // 
+            // btnFacturar
+            // 
+            this.btnFacturar.Location = new System.Drawing.Point(97, 377);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Size = new System.Drawing.Size(205, 61);
+            this.btnFacturar.TabIndex = 9;
+            this.btnFacturar.Text = "Facturar";
+            this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 556);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(745, 526);
+            this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnUsuarios);
@@ -142,7 +158,9 @@
             this.Controls.Add(this.btnEmpleado);
             this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.btnCargos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenu";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,5 +178,6 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnFacturar;
     }
 }
