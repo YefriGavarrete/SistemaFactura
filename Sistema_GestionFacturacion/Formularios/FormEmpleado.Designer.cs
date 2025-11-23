@@ -395,6 +395,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblOperacion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEmpleado";
             this.Text = "FormEmpleado";
             this.Load += new System.EventHandler(this.FormEmpleado_Load);

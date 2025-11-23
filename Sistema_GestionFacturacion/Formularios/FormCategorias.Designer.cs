@@ -321,8 +321,9 @@
             this.Controls.Add(this.rbDatosActivos);
             this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.dgvDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCategorias";
-            this.Text = "FormCategorias";
+            this.Text = "Categorias";
             this.Load += new System.EventHandler(this.FormCategorias_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

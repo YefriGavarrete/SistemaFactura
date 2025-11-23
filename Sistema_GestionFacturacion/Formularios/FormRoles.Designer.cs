@@ -43,13 +43,13 @@
             this.btnTestConexion = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblIdRol = new System.Windows.Forms.Label();
+            this.txtIdRol = new System.Windows.Forms.TextBox();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.rbDatosInactivos = new System.Windows.Forms.RadioButton();
             this.rbDatosActivos = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.txtIdRol = new System.Windows.Forms.TextBox();
-            this.lblIdRol = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -90,6 +90,7 @@
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.Size = new System.Drawing.Size(1184, 250);
             this.dgvDatos.TabIndex = 35;
+            this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             this.dgvDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellDoubleClick);
             // 
             // lblOperacion
@@ -224,6 +225,27 @@
             this.panel1.Size = new System.Drawing.Size(641, 123);
             this.panel1.TabIndex = 33;
             // 
+            // lblIdRol
+            // 
+            this.lblIdRol.AutoSize = true;
+            this.lblIdRol.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdRol.ForeColor = System.Drawing.Color.White;
+            this.lblIdRol.Location = new System.Drawing.Point(17, 31);
+            this.lblIdRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdRol.Name = "lblIdRol";
+            this.lblIdRol.Size = new System.Drawing.Size(51, 20);
+            this.lblIdRol.TabIndex = 58;
+            this.lblIdRol.Text = "IdRol";
+            // 
+            // txtIdRol
+            // 
+            this.txtIdRol.Enabled = false;
+            this.txtIdRol.Location = new System.Drawing.Point(114, 29);
+            this.txtIdRol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdRol.Name = "txtIdRol";
+            this.txtIdRol.Size = new System.Drawing.Size(117, 23);
+            this.txtIdRol.TabIndex = 59;
+            // 
             // txtFiltrar
             // 
             this.txtFiltrar.Location = new System.Drawing.Point(97, 251);
@@ -286,27 +308,6 @@
             this.lblEstado.Text = "Estado";
             this.lblEstado.Visible = false;
             // 
-            // txtIdRol
-            // 
-            this.txtIdRol.Enabled = false;
-            this.txtIdRol.Location = new System.Drawing.Point(114, 29);
-            this.txtIdRol.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdRol.Name = "txtIdRol";
-            this.txtIdRol.Size = new System.Drawing.Size(117, 23);
-            this.txtIdRol.TabIndex = 59;
-            // 
-            // lblIdRol
-            // 
-            this.lblIdRol.AutoSize = true;
-            this.lblIdRol.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdRol.ForeColor = System.Drawing.Color.White;
-            this.lblIdRol.Location = new System.Drawing.Point(17, 31);
-            this.lblIdRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIdRol.Name = "lblIdRol";
-            this.lblIdRol.Size = new System.Drawing.Size(51, 20);
-            this.lblIdRol.TabIndex = 58;
-            this.lblIdRol.Text = "IdRol";
-            // 
             // FormRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -321,8 +322,9 @@
             this.Controls.Add(this.rbDatosInactivos);
             this.Controls.Add(this.rbDatosActivos);
             this.Controls.Add(this.label10);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRoles";
-            this.Text = "FormRoles";
+            this.Text = "Roles";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

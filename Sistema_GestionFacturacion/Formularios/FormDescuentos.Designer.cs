@@ -346,8 +346,9 @@
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDescuentos";
-            this.Text = "FormDescuentos";
+            this.Text = "Descuentos";
             this.Load += new System.EventHandler(this.FormDescuentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
