@@ -290,5 +290,10 @@ namespace Sistema_GestionFacturacion.Formularios
                 MostrarRegistros("Inactivo");
             }
         }
+
+        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

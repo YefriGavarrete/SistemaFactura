@@ -143,7 +143,7 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
         
-        
+     
         void AbrirFormHijo(Form Formulario)
         {
             if (Formulario == null) return;
@@ -233,6 +233,11 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             var usuarios = new FormUsuariosLogin();
             AbrirFormHijo(usuarios);
+        }
+
+        private void panelContenido_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -420,8 +420,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormUsuariosLogin";
-            this.Text = "FormUsuariosLogin";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FormUsuariosLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.menuStrip1.ResumeLayout(false);

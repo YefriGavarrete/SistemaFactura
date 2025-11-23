@@ -321,8 +321,9 @@
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCargos";
-            this.Text = "FormCargos";
+            this.Text = "Cargos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

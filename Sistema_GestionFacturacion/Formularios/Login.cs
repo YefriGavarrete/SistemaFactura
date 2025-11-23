@@ -2,8 +2,10 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 
 
@@ -19,6 +21,8 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             InitializeComponent();
             Habilitar();
+           
+
         }
 
         void Habilitar()
@@ -219,9 +223,33 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
+
+
+        void MostrasrClave()
+        {
+            if (chkMostrar.Checked)
+            {
+                txtClave.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtClave.UseSystemPasswordChar = true;
+            }
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             IniciarSesion();
+        }
+
+        private void lnkRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            MostrasrClave();
         }
     }
 }
