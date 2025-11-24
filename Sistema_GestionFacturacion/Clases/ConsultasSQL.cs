@@ -157,5 +157,26 @@ namespace Sistema_GestionFacturacion.Clases
 
             return resultados;
         }
+
+        // Guardar archivo pdf
+        public bool GuardarPDF(string tabla, string columnas, Dictionary<string, object> parametros)
+        {
+            string sql = $"INSERT INTO {tabla}({columnas}) VALUES (";
+
+            var names = parametros.Keys.Select(p => "@" + p);
+            sql += string.Join(", ", names) + ")";
+
+            using (var conn = new SqlConnection(GetConnectionString()))
+            using (var cmd = new SqlCommand(sql, conn))
+            {
+                foreach (var par in parametros)
+                {
+                    cmd.Parameters.AddWithValue("@" + par.Key, par.Value);
+                }
+
+                conn.Open();
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }

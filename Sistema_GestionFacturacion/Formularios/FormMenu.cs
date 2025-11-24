@@ -90,7 +90,7 @@ namespace Sistema_GestionFacturacion.Formularios
             //debo de agregar todos los botones para inhabilitarlos para el usuario, no  para el administrador
             btnUsuarios.Enabled = false;
             btnRoles.Enabled = false;
-            btnPedidos.Enabled = false;
+            btnPedidos.Enabled = true;
             btnCargos.Enabled = false;
             btnCategorias.Enabled = false;
             btnCargos.Enabled = false;
