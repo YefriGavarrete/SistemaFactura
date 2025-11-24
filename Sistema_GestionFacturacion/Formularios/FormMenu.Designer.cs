@@ -91,7 +91,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.DimGray;
+            this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.btnRegresar.BorderRadius = 8;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -102,9 +102,9 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnRegresar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
             this.btnRegresar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRegresar.Location = new System.Drawing.Point(809, 30);
+            this.btnRegresar.Location = new System.Drawing.Point(909, 29);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(161, 40);
+            this.btnRegresar.Size = new System.Drawing.Size(165, 50);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "REGRESAR";
             this.btnRegresar.TextOffset = new System.Drawing.Point(0, -2);
@@ -127,12 +127,13 @@ namespace Sistema_GestionFacturacion.Formularios
             this.panelContenido.FillColor = System.Drawing.Color.Silver;
             this.panelContenido.Location = new System.Drawing.Point(0, 100);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(1119, 600);
+            this.panelContenido.Size = new System.Drawing.Size(1119, 562);
             this.panelContenido.TabIndex = 1;
             this.panelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenido_Paint);
             // 
             // btnHistorialFacturas
             // 
+            this.btnHistorialFacturas.BackColor = System.Drawing.Color.Transparent;
             this.btnHistorialFacturas.BorderRadius = 12;
             this.btnHistorialFacturas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorialFacturas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -154,6 +155,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnHistorialPedidos
             // 
+            this.btnHistorialPedidos.BackColor = System.Drawing.Color.Transparent;
             this.btnHistorialPedidos.BorderRadius = 12;
             this.btnHistorialPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorialPedidos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -176,6 +178,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnProductos
             // 
+            this.btnProductos.BackColor = System.Drawing.Color.Transparent;
             this.btnProductos.BorderRadius = 12;
             this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -193,9 +196,11 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnProductos.Size = new System.Drawing.Size(220, 140);
             this.btnProductos.TabIndex = 7;
             this.btnProductos.Text = "PRODUCTOS";
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnCargos
             // 
+            this.btnCargos.BackColor = System.Drawing.Color.Transparent;
             this.btnCargos.BorderRadius = 12;
             this.btnCargos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -217,6 +222,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnCategorias
             // 
+            this.btnCategorias.BackColor = System.Drawing.Color.Transparent;
             this.btnCategorias.BorderRadius = 12;
             this.btnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategorias.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -238,6 +244,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnDescuento
             // 
+            this.btnDescuento.BackColor = System.Drawing.Color.Transparent;
             this.btnDescuento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDescuento.BorderRadius = 12;
             this.btnDescuento.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -260,6 +267,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnEmpleado
             // 
+            this.btnEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.btnEmpleado.BorderRadius = 12;
             this.btnEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmpleado.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -281,6 +289,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnPedidos
             // 
+            this.btnPedidos.BackColor = System.Drawing.Color.Transparent;
             this.btnPedidos.BorderRadius = 5;
             this.btnPedidos.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -303,6 +312,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnRoles
             // 
+            this.btnRoles.BackColor = System.Drawing.Color.Transparent;
             this.btnRoles.BorderRadius = 12;
             this.btnRoles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoles.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -324,6 +334,7 @@ namespace Sistema_GestionFacturacion.Formularios
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.BorderRadius = 12;
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -348,7 +359,7 @@ namespace Sistema_GestionFacturacion.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1119, 700);
+            this.ClientSize = new System.Drawing.Size(1119, 662);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

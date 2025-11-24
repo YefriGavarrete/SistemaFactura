@@ -88,12 +88,16 @@ namespace Sistema_GestionFacturacion.Formularios
         {
 
             //debo de agregar todos los botones para inhabilitarlos para el usuario, no  para el administrador
-            btnUsuarios.Enabled = false;
-            btnRoles.Enabled = false;
-            btnPedidos.Enabled = true;
             btnCargos.Enabled = false;
+            btnPedidos.Enabled = false;
+            btnEmpleado.Enabled = false;
+            btnDescuento.Enabled = false;
             btnCategorias.Enabled = false;
-            btnCargos.Enabled = false;
+            btnRoles.Enabled = false;
+            btnUsuarios.Enabled = false;
+            btnProductos.Enabled = false;
+            btnHistorialPedidos.Enabled = false;
+            btnHistorialFacturas.Enabled = false;
             return true;
         }
 
@@ -101,49 +105,82 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             var adminButtons = new[]
             {
-                "btnPedidos", "btnDetallesPedidos", "btnFacturas",
-                "btnCargos", "btnEmpleados", "btnProductos",
-                "btnCategorias", "btnDescuentos", "btnUsuarios", "btnRoles"
+                "btnCargos", "btnPedidos", "btnEmpleado",
+                "btnDescuento", "btnCategorias", "btnRoles",
+                "btnUsuarios", "btnProductos", "btnHistorialPedidos", "btnHistorialFacturas"
             };
             establecerInhabilitarButtones(adminButtons, true);
 
         }
 
+        /*
+        private Guna.UI2.WinForms.Guna2Panel panelHeader;
+        private Guna.UI2.WinForms.Guna2Panel panelContenido;    
+        private System.Windows.Forms.Label lblBienvenida;
+        private System.Windows.Forms.Label lblUsuario;
+        private Guna.UI2.WinForms.Guna2Button btnRegresar;
+        private Guna.UI2.WinForms.Guna2Button btnCargos;
+        private Guna.UI2.WinForms.Guna2Button btnPedidos;
+        private Guna.UI2.WinForms.Guna2Button btnEmpleado;
+        private Guna.UI2.WinForms.Guna2Button btnDescuento;
+        private Guna.UI2.WinForms.Guna2Button btnCategorias;
+        private Guna.UI2.WinForms.Guna2Button btnRoles;
+        private Guna.UI2.WinForms.Guna2Button btnUsuarios;
+        private Guna.UI2.WinForms.Guna2Button btnProductos;
+        private Guna.UI2.WinForms.Guna2Button btnHistorialPedidos;
+        private Guna.UI2.WinForms.Guna2Button btnHistorialFacturas;
+         */
+
         void ConfigurarButtonesEmpleados()
         {
             var empleadosButtons = new[]
             {
-                 "btnPedidos", "btnDetallesPedidos", "btnFacturas"
+                 "btnPedidos", "btnHistorialPedidos", "btnHistorialFacturas, btnProductos"
             };
             InhabilitarButtons();
             establecerInhabilitarButtones(empleadosButtons, true);
         }
 
 
-        void establecerInhabilitarButtones(IEnumerable<string> nombres, bool habilitar)
+  
+        void establecerInhabilitarButtones(IEnumerable<string> nombres, bool habilitar = true)
         {
             foreach (var nombre in nombres)
             {
                 try
                 {
-                    var button = this.Controls.Find(nombre, true);
-                    foreach (var btn in button)
+                    var controles = this.Controls.Find(nombre, true);
+                    foreach (var ctrl in controles)
                     {
-                        if (btn is Button b)
+                        if (ctrl is System.Windows.Forms.Button b)
                         {
                             b.Enabled = habilitar;
                             b.Visible = habilitar;
+                            continue;
+                        }
+
+                        if (ctrl.GetType().FullName == "Guna.UI2.WinForms.Guna2Button")
+                        {
+                            var enabledProp = ctrl.GetType().GetProperty("Enabled");
+                            var visibleProp = ctrl.GetType().GetProperty("Visible");
+                            if (enabledProp != null) enabledProp.SetValue(ctrl, habilitar);
+                            if (visibleProp != null) visibleProp.SetValue(ctrl, habilitar);
+                            continue;
+                        }
+                        if (ctrl is Control genericCtrl)
+                        {
+                            genericCtrl.Enabled = habilitar;
+                            genericCtrl.Visible = habilitar;
                         }
                     }
                 }
                 catch
                 {
-
+                    //
                 }
             }
         }
-        
-     
+
         void AbrirFormHijo(Form Formulario)
         {
             if (Formulario == null) return;
@@ -218,7 +255,7 @@ namespace Sistema_GestionFacturacion.Formularios
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            //var pedidos = new FormPedidos(nombre, apellido);
+
             var pedidos = new FormPedidos(idUsuario, rolUsuario, nombreUsuario, apellidoUsuario);
             AbrirFormHijo(pedidos);
         }
@@ -238,6 +275,12 @@ namespace Sistema_GestionFacturacion.Formularios
         private void panelContenido_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            /*var productos = new FormProductos();
+            AbrirFormHijo(productos);*/
         }
     }
 }

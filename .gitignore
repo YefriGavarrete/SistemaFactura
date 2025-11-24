@@ -6,3 +6,6 @@
 
 # Caché de Visual Studio (carpeta .vs/)
 **/.vs/
+
+# (Librerías de NuGet)
+packages/
