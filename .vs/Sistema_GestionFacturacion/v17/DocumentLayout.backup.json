@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\braya\\source\\repos\\SistemaF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formdescuentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formdescuentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formdescuentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formdescuentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formprocesopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formprocesopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formbuscarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formbuscarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|c:\\users\\braya\\source\\repos\\sistemaf\\sistema_gestionfacturacion\\formularios\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E55930B-AA65-4C45-A003-9C55012B8434}|Sistema_GestionFacturacion\\Sistema_GestionFacturacion.csproj|solutionrelative:sistema_gestionfacturacion\\formularios\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,53 +82,138 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.cs",
-              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\Login.cs",
-              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.cs",
-              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\Login.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAjwP0AAAAZAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FormMenu.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormMenu.Designer.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormMenu.Designer.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormMenu.Designer.cs",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormMenu.Designer.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAlwOYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T02:21:01.065Z",
+              "WhenOpened": "2025-11-27T03:22:45.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormMenu.cs",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormMenu.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormMenu.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormMenu.cs",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormMenu.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T03:21:30.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.cs",
-              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\Login.cs",
-              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\Login.cs [Dise\u00F1o]",
+              "Title": "FormMenu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormMenu.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormMenu.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormMenu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormMenu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T02:09:36.421Z",
+              "WhenOpened": "2025-11-27T03:17:23.873Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "FormRoles.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormRoles.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormRoles.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormRoles.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormRoles.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T03:11:28.588Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormDescuentos.cs",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAswO0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:57:00.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FormProcesoPago.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormProcesoPago.cs",
               "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormProcesoPago.cs",
               "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormProcesoPago.cs [Dise\u00F1o]",
               "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormProcesoPago.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T02:12:15.102Z",
+              "WhenOpened": "2025-11-27T02:47:40.581Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\Login.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\Login.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:47:11.451Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.Designer.cs",
-              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\Login.Designer.cs",
-              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\Login.Designer.cs",
-              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\Login.Designer.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAswKUAAABTAAAAAAAAAA==",
+              "Title": "FormDescuentos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormDescuentos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T02:10:55.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T02:39:14.793Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormEmpleado.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormEmpleado.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:36:38.598Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormBuscarProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormBuscarProductos.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormBuscarProductos.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormBuscarProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormBuscarProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:36:01.979Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormPedidos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormPedidos.cs",
+              "RelativeDocumentMoniker": "Sistema_GestionFacturacion\\Formularios\\FormPedidos.cs",
+              "ToolTip": "C:\\Users\\braya\\source\\repos\\SistemaF\\Sistema_GestionFacturacion\\Formularios\\FormPedidos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema_GestionFacturacion\\Formularios\\FormPedidos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:35:48.419Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

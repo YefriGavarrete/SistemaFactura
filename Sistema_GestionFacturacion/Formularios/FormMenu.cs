@@ -224,33 +224,46 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
-        private void btnCargos_Click(object sender, EventArgs e)
-        {
-            var cargos = new FormCargos();
-            AbrirFormHijo(cargos);
-        }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Regresar();
         }
 
-        private void btnCategorias_Click(object sender, EventArgs e)
+        private void btnDescuento_Click_1(object sender, EventArgs e)
         {
-            var categorias = new FormCategorias();
-            AbrirFormHijo(categorias);
+            var form = new FormDescuentos();
+            AbrirFormHijo(form);
         }
 
-        private void btnDescuento_Click(object sender, EventArgs e)
+        private void btnCargos_Click_1(object sender, EventArgs e)
         {
-            var Descuentos = new FormDescuentos();
-            AbrirFormHijo(Descuentos);
+            var form = new FormCargos();
+            AbrirFormHijo(form);
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            var form = new FormCategorias();
+            AbrirFormHijo(form);
         }
 
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
-            var empleados = new FormEmpleado();
-            AbrirFormHijo(empleados);
+            var form = new FormEmpleado();
+            AbrirFormHijo(form);
+        }
+
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            var form = new FormRoles();
+            AbrirFormHijo(form);
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            var form = new FormUsuariosLogin();
+            AbrirFormHijo(form);
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -260,29 +273,6 @@ namespace Sistema_GestionFacturacion.Formularios
 
             var pedidos = new FormPedidos(idUsuario, rolUsuario, nombreUsuario, apellidoUsuario, EstadoPago, MetodooPago);
             AbrirFormHijo(pedidos);
-        }
-
-        private void btnRoles_Click(object sender, EventArgs e)
-        {
-            var roles = new FormRoles();
-            AbrirFormHijo(roles);
-        }
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            var usuarios = new FormUsuariosLogin();
-            AbrirFormHijo(usuarios);
-        }
-
-        private void panelContenido_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            /*var productos = new FormProductos();
-            AbrirFormHijo(productos);*/
         }
     }
 }
