@@ -255,8 +255,10 @@ namespace Sistema_GestionFacturacion.Formularios
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
+            string EstadoPago = "Pendiente";
+            string MetodooPago = "Pendiente";
 
-            var pedidos = new FormPedidos(idUsuario, rolUsuario, nombreUsuario, apellidoUsuario);
+            var pedidos = new FormPedidos(idUsuario, rolUsuario, nombreUsuario, apellidoUsuario, EstadoPago, MetodooPago);
             AbrirFormHijo(pedidos);
         }
 

@@ -50,6 +50,7 @@
             this.rbDatosActivos = new System.Windows.Forms.RadioButton();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -60,10 +61,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(49, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(37, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Categorias";
             // 
@@ -72,10 +72,9 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblEstado.Location = new System.Drawing.Point(614, 80);
-            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstado.Location = new System.Drawing.Point(460, 65);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(62, 20);
+            this.lblEstado.Size = new System.Drawing.Size(49, 17);
             this.lblEstado.TabIndex = 55;
             this.lblEstado.Text = "Estado";
             this.lblEstado.Visible = false;
@@ -85,10 +84,9 @@
             this.lblOperacion.AutoSize = true;
             this.lblOperacion.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperacion.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblOperacion.Location = new System.Drawing.Point(31, 80);
-            this.lblOperacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOperacion.Location = new System.Drawing.Point(23, 65);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(99, 20);
+            this.lblOperacion.Size = new System.Drawing.Size(77, 17);
             this.lblOperacion.TabIndex = 54;
             this.lblOperacion.Text = "Categorias:";
             this.lblOperacion.Visible = false;
@@ -102,28 +100,25 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(35, 103);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(26, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(641, 123);
+            this.panel1.Size = new System.Drawing.Size(481, 100);
             this.panel1.TabIndex = 53;
             // 
             // txtIdCategorias
             // 
             this.txtIdCategorias.Enabled = false;
-            this.txtIdCategorias.Location = new System.Drawing.Point(145, 25);
-            this.txtIdCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdCategorias.Location = new System.Drawing.Point(109, 20);
             this.txtIdCategorias.Name = "txtIdCategorias";
-            this.txtIdCategorias.Size = new System.Drawing.Size(117, 23);
+            this.txtIdCategorias.Size = new System.Drawing.Size(89, 20);
             this.txtIdCategorias.TabIndex = 57;
             // 
             // txtCategorias
             // 
             this.txtCategorias.Enabled = false;
-            this.txtCategorias.Location = new System.Drawing.Point(151, 60);
-            this.txtCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCategorias.Location = new System.Drawing.Point(113, 49);
             this.txtCategorias.Name = "txtCategorias";
-            this.txtCategorias.Size = new System.Drawing.Size(455, 23);
+            this.txtCategorias.Size = new System.Drawing.Size(342, 20);
             this.txtCategorias.TabIndex = 24;
             // 
             // label1
@@ -131,10 +126,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 56;
             this.label1.Text = "IdCategorias";
             // 
@@ -154,7 +148,8 @@
             this.btnSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1300, 40);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(975, 33);
             this.menuStrip1.TabIndex = 48;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,7 +159,7 @@
             this.btnNuevoRegistro.ForeColor = System.Drawing.Color.White;
             this.btnNuevoRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoRegistro.Image")));
             this.btnNuevoRegistro.Name = "btnNuevoRegistro";
-            this.btnNuevoRegistro.Size = new System.Drawing.Size(100, 36);
+            this.btnNuevoRegistro.Size = new System.Drawing.Size(85, 29);
             this.btnNuevoRegistro.Text = "Nuevo";
             this.btnNuevoRegistro.Click += new System.EventHandler(this.btnNuevoRegistro_Click);
             // 
@@ -175,7 +170,7 @@
             this.btnGuardarRegistro.ForeColor = System.Drawing.Color.White;
             this.btnGuardarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarRegistro.Image")));
             this.btnGuardarRegistro.Name = "btnGuardarRegistro";
-            this.btnGuardarRegistro.Size = new System.Drawing.Size(112, 36);
+            this.btnGuardarRegistro.Size = new System.Drawing.Size(96, 29);
             this.btnGuardarRegistro.Text = "Guardar";
             this.btnGuardarRegistro.Click += new System.EventHandler(this.btnGuardarRegistro_Click);
             // 
@@ -186,7 +181,7 @@
             this.btnCancelarRegistro.ForeColor = System.Drawing.Color.White;
             this.btnCancelarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarRegistro.Image")));
             this.btnCancelarRegistro.Name = "btnCancelarRegistro";
-            this.btnCancelarRegistro.Size = new System.Drawing.Size(116, 36);
+            this.btnCancelarRegistro.Size = new System.Drawing.Size(99, 29);
             this.btnCancelarRegistro.Text = "Cancelar";
             this.btnCancelarRegistro.Click += new System.EventHandler(this.btnCancelarRegistro_Click);
             // 
@@ -197,7 +192,7 @@
             this.btnDesactivarRegistro.ForeColor = System.Drawing.Color.White;
             this.btnDesactivarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnDesactivarRegistro.Image")));
             this.btnDesactivarRegistro.Name = "btnDesactivarRegistro";
-            this.btnDesactivarRegistro.Size = new System.Drawing.Size(203, 36);
+            this.btnDesactivarRegistro.Size = new System.Drawing.Size(170, 29);
             this.btnDesactivarRegistro.Text = "Desactivar Registro";
             this.btnDesactivarRegistro.Click += new System.EventHandler(this.btnDesactivarRegistro_Click_1);
             // 
@@ -208,7 +203,7 @@
             this.btnReactivarRegistro.ForeColor = System.Drawing.Color.White;
             this.btnReactivarRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnReactivarRegistro.Image")));
             this.btnReactivarRegistro.Name = "btnReactivarRegistro";
-            this.btnReactivarRegistro.Size = new System.Drawing.Size(201, 36);
+            this.btnReactivarRegistro.Size = new System.Drawing.Size(169, 29);
             this.btnReactivarRegistro.Text = "Reactivar Registros";
             this.btnReactivarRegistro.Click += new System.EventHandler(this.btnReactivarRegistro_Click_1);
             // 
@@ -218,7 +213,7 @@
             this.btnActualizarDGV.ForeColor = System.Drawing.Color.White;
             this.btnActualizarDGV.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDGV.Image")));
             this.btnActualizarDGV.Name = "btnActualizarDGV";
-            this.btnActualizarDGV.Size = new System.Drawing.Size(150, 36);
+            this.btnActualizarDGV.Size = new System.Drawing.Size(126, 29);
             this.btnActualizarDGV.Text = "Refresh Data";
             this.btnActualizarDGV.Click += new System.EventHandler(this.btnActualizarDGV_Click);
             // 
@@ -228,7 +223,7 @@
             this.btnTestConexion.ForeColor = System.Drawing.Color.White;
             this.btnTestConexion.Image = ((System.Drawing.Image)(resources.GetObject("btnTestConexion.Image")));
             this.btnTestConexion.Name = "btnTestConexion";
-            this.btnTestConexion.Size = new System.Drawing.Size(162, 36);
+            this.btnTestConexion.Size = new System.Drawing.Size(136, 29);
             this.btnTestConexion.Text = "Test Conexion";
             this.btnTestConexion.Click += new System.EventHandler(this.btnTestConexion_Click);
             // 
@@ -238,7 +233,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(85, 36);
+            this.btnSalir.Size = new System.Drawing.Size(73, 29);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -247,10 +242,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label10.Location = new System.Drawing.Point(31, 289);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(23, 235);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 20);
+            this.label10.Size = new System.Drawing.Size(45, 17);
             this.label10.TabIndex = 49;
             this.label10.Text = "Filtrar";
             // 
@@ -258,10 +252,9 @@
             // 
             this.rbDatosInactivos.AutoSize = true;
             this.rbDatosInactivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDatosInactivos.Location = new System.Drawing.Point(1028, 288);
-            this.rbDatosInactivos.Margin = new System.Windows.Forms.Padding(4);
+            this.rbDatosInactivos.Location = new System.Drawing.Point(771, 234);
             this.rbDatosInactivos.Name = "rbDatosInactivos";
-            this.rbDatosInactivos.Size = new System.Drawing.Size(179, 24);
+            this.rbDatosInactivos.Size = new System.Drawing.Size(142, 21);
             this.rbDatosInactivos.TabIndex = 52;
             this.rbDatosInactivos.TabStop = true;
             this.rbDatosInactivos.Text = "Registros Inactivos";
@@ -272,10 +265,9 @@
             // 
             this.rbDatosActivos.AutoSize = true;
             this.rbDatosActivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDatosActivos.Location = new System.Drawing.Point(844, 287);
-            this.rbDatosActivos.Margin = new System.Windows.Forms.Padding(4);
+            this.rbDatosActivos.Location = new System.Drawing.Point(633, 233);
             this.rbDatosActivos.Name = "rbDatosActivos";
-            this.rbDatosActivos.Size = new System.Drawing.Size(167, 24);
+            this.rbDatosActivos.Size = new System.Drawing.Size(132, 21);
             this.rbDatosActivos.TabIndex = 51;
             this.rbDatosActivos.TabStop = true;
             this.rbDatosActivos.Text = "Registros Activos";
@@ -284,10 +276,9 @@
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Location = new System.Drawing.Point(98, 290);
-            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFiltrar.Location = new System.Drawing.Point(74, 236);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(389, 22);
+            this.txtFiltrar.Size = new System.Drawing.Size(293, 20);
             this.txtFiltrar.TabIndex = 50;
             this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
@@ -298,20 +289,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(35, 319);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDatos.Location = new System.Drawing.Point(26, 259);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersWidth = 51;
-            this.dgvDatos.Size = new System.Drawing.Size(1184, 250);
+            this.dgvDatos.Size = new System.Drawing.Size(888, 203);
             this.dgvDatos.TabIndex = 47;
             this.dgvDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellDoubleClick);
             // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FormCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 562);
+            this.ClientSize = new System.Drawing.Size(975, 457);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.panel1);
@@ -322,6 +326,7 @@
             this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.dgvDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCategorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.FormCategorias_Load);
@@ -358,5 +363,6 @@
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.TextBox txtIdCategorias;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
     }
 }

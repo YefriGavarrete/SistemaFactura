@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\AlertasDelSistema.cs" />
+    <Compile Include="Clases\ClaseProcesoPago.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\ConsultasSQL.cs" />
     <Compile Include="Formularios\FormBuscarProductos.cs">
@@ -103,6 +104,12 @@
     </Compile>
     <Compile Include="Formularios\FormPedidos.Designer.cs">
       <DependentUpon>FormPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormProcesoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormProcesoPago.Designer.cs">
+      <DependentUpon>FormProcesoPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormRoles.cs">
       <SubType>Form</SubType>
@@ -150,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPedidos.resx">
       <DependentUpon>FormPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormProcesoPago.resx">
+      <DependentUpon>FormProcesoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormRoles.resx">
       <DependentUpon>FormRoles.cs</DependentUpon>
