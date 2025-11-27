@@ -142,7 +142,9 @@ namespace Sistema_GestionFacturacion.Formularios
                             try
                             {
                                 // Abrir FormularioPedidos 
-                                var pedidos = new FormPedidos(idUsuario, rolNombre, nombre, apellido);
+                                string EstadoPago = "Pendiente";
+                                string MetodooPago = "Pendiente";
+                                var pedidos = new FormPedidos(idUsuario, rolNombre, nombre, apellido, EstadoPago, MetodooPago);
                                 this.Hide();
                                 pedidos.Show();
                             }
@@ -237,19 +239,19 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnIngresar_Click_1(object sender, EventArgs e)
         {
             IniciarSesion();
-        }
-
-        private void lnkRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
 
         private void chkMostrar_CheckedChanged(object sender, EventArgs e)
         {
             MostrasrClave();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -22,21 +22,29 @@ namespace Sistema_GestionFacturacion.Formularios
     {
         ConsultasSQL consultas = new ConsultasSQL();
         AlertasDelSistema Alertas = new AlertasDelSistema();
+        ClaseProcesoPago procesoPago;
 
         int IdUsuario;
         string rolUsario;
         string UsuarioNombre;
         string UsuarioApellido;
 
+        string estadoPagoGlobal;
+        string metodoPagoGlobal;
+
         DateTime Fecha = DateTime.Now;
         string fechaSQL = "yyyy-MM-dd HH:mm:ss";
 
-        public FormPedidos(int id, string rol, string nombre, string apellido)
+        public FormPedidos(int id, string rol, string nombre, string apellido, string estadoPago, string metodoPago)
         {
             IdUsuario = id;
             rolUsario = rol ?? string.Empty;
             UsuarioNombre = nombre ?? string.Empty;
             UsuarioApellido = apellido ?? string.Empty;
+
+            estadoPagoGlobal = estadoPago;
+            metodoPagoGlobal = metodoPago;
+
             InitializeComponent();
             MostrarEmpleado();
 
@@ -141,9 +149,9 @@ namespace Sistema_GestionFacturacion.Formularios
             string nombre = txtNombre.Text.Trim();
             string apellido = txtApellido.Text.Trim();
             string dni = txtDNI.Text.Trim();
-            string estado = "Pendiente";
+            //string estado = "Pendiente";
             string montopagado = txtTotal.Text.Trim();
-            string metodopago = "Pendiente";
+            //string metodopago = "Pendiente";
             int idEmpleado = IdUsuario;
 
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(dni))
@@ -155,7 +163,7 @@ namespace Sistema_GestionFacturacion.Formularios
             string fecha = Fecha.ToString(fechaSQL);
 
             string columnas = "NombreCliente, ApellidoCliente, DNI, Fecha, IdEmpleado, NombreEmpleado, ApellidoEmpleado, Estado, MetodoPago, MontoPagado";
-            string valores = $"'{nombre}', '{apellido}', '{dni.ToString()}','{fecha}', '{idEmpleado}', '{UsuarioNombre}', '{UsuarioApellido}', '{estado}', '{metodopago}', '{montopagado}'";
+            string valores = $"'{nombre}', '{apellido}', '{dni.ToString()}','{fecha}', '{idEmpleado}', '{UsuarioNombre}', '{UsuarioApellido}', '{estadoPagoGlobal}', '{metodoPagoGlobal}', '{montopagado}'";
             //Nombre y Apellido del empleado que crea el pedido
             if (consultas.Guardar("Pedidos", columnas, valores))
             {
@@ -179,8 +187,9 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
+
         // metodo para guardar dellates pedidos y actualizar tabla pedido con el monto total
-        void GuardarDetallesPedido()
+        public void GuardarDetallesPedido(ClaseProcesoPago procesoPago)
         {
             if (string.IsNullOrEmpty(txtIdPedido.Text))
             {
@@ -229,9 +238,9 @@ namespace Sistema_GestionFacturacion.Formularios
 
             if (exito)
             {
-                Alertas.Realizado("Pedido creado exitosamente.");
+                //Alertas.Realizado("Pedido creado exitosamente.");
 
-                actualizarPedido();
+                actualizarPedido(procesoPago);
                 RestarStockProducto();
                 LimpiarFormulario();
             }
@@ -281,22 +290,22 @@ namespace Sistema_GestionFacturacion.Formularios
         }
 
         // metodo para actualizar el estado y monto del pedido facturado
-        void actualizarPedido()
+        void actualizarPedido(ClaseProcesoPago pago)
         {
             try
             {
-                string estado = "Facturado";
-                decimal montopagado = decimal.Parse(txtTotal.Text);
-                string metodopago = "Efectivo";
-                string actualizar = $"Estado = '{estado}', MetodoPago = '{metodopago}', MontoPagado = '{montopagado}'";
+                string estado = pago.EstadoPago;
+                string metodopago = pago.MetodoPago;
 
+                decimal montopagado = decimal.Parse(txtTotal.Text);               
+                string actualizar = $"Estado = '{estado}', MetodoPago = '{metodopago}', MontoPagado = '{montopagado}'";
                 string condicion = $"IdPedido='{txtIdPedido.Text}'";
 
                 consultas.update("Pedidos", actualizar, condicion);
             }
             catch (Exception ex)
             {
-                Alertas.Advertencia($"Error al actualizar usuario: {ex.Message}");
+                Alertas.Advertencia($"Error al actualizar el pedido: {ex.Message}");
             }
         }
 
@@ -655,21 +664,19 @@ namespace Sistema_GestionFacturacion.Formularios
 
                 doc.Close();
 
+                Alertas.Realizado($"Factura guardada correctamente en:\n{rutaCompleta}");
+                GuardarFactura(idpedido, exito, nombreArchivo);
+
                 // ==================== ABRIR PDF AUTOMÁTICAMENTE ====================
                 Process.Start(new ProcessStartInfo()
                 {
                     FileName = rutaCompleta,
                     UseShellExecute = true
-                });
-
-                MessageBox.Show($"Factura guardada correctamente en:\n{rutaCompleta}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                GuardarFactura(idpedido, exito, nombreArchivo);
-
+                });             
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show($"Error al generar la factura: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Alertas.Advertencia("Error al generar la factura, CONTACTE A SISTEMAS");
             }
         }
 
@@ -695,15 +702,15 @@ namespace Sistema_GestionFacturacion.Formularios
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-           /*int idPedido= int.Parse(txtIdPedido.Text);
+             int idPedido= int.Parse(txtIdPedido.Text);
              string NombrePedidoCliente= txtNombre.Text;
              string ApellidoPedidoCliente = txtApellido.Text;
-             long DniCliente = long.Parse(txtDNI.Text);
+             decimal totalPago = decimal.Parse(txtTotal.Text);
 
-             FormProcesarPago frm = new FormProcesarPago(idPedido, NombrePedidoCliente, ApellidoPedidoCliente, DniCliente);
-             frm.ShowDialog();*/
+            FormProcesoPago frm = new FormProcesoPago(this, idPedido, NombrePedidoCliente, ApellidoPedidoCliente, totalPago);
+            frm.ShowDialog();
 
-            GuardarDetallesPedido();
+            //GuardarDetallesPedido();
         }
 
         private void btnCrearPedido_Click(object sender, EventArgs e)

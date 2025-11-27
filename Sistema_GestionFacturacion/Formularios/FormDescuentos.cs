@@ -21,6 +21,8 @@ namespace Sistema_GestionFacturacion.Formularios
             InitializeComponent();
             MostrarRegistros("Activo");
             rbDatosActivos.Checked = true;
+            txtFiltrar.Enabled = true;
+            txtIdDescuento.Enabled = false;
         }
         void LimpiarCampos()
         {
@@ -36,6 +38,7 @@ namespace Sistema_GestionFacturacion.Formularios
             txtDescuento.Enabled = valor;
             txtDescripcion.Enabled = valor;
             btnNuevoRegistro.Enabled = !valor;
+            txtIdDescuento.Enabled = !valor;
         }
 
         void GuardarDescuento()
@@ -278,7 +281,7 @@ namespace Sistema_GestionFacturacion.Formularios
             MostrarRegistros("Activo");
         }
 
-        private void txtFiltrar_TextChanged_1(object sender, EventArgs e)
+        void filtrar()
         {
             string texto = txtFiltrar.Text.Trim();
 
@@ -288,9 +291,8 @@ namespace Sistema_GestionFacturacion.Formularios
                 dt.DefaultView.RowFilter =
                     $"Convert(Descuento, 'System.String') LIKE '%{texto}%' OR " +
                     $"Descripcion LIKE '%{texto}%'";
-        }
+            }
             colorColumnaEstado();
-
         }
 
         private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -302,6 +304,11 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             this.Close();
 
+        }
+
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            filtrar();
         }
     }
 }

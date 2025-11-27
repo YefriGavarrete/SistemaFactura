@@ -82,7 +82,7 @@ namespace Sistema_GestionFacturacion.Clases
             }
             catch (SqlException error)
             {
-                Alertas.Realizado($"Error al recuperar datos:\n{error.Message}");
+                Alertas.Advertencia($"Error al recuperar datos:\n{error.Message}");
             }
 
 
@@ -103,7 +103,7 @@ namespace Sistema_GestionFacturacion.Clases
             }
             catch (SqlException error)
             {
-                Alertas.Realizado($"Error al ejecutar consulta:\n{error.Message}");
+                Alertas.Advertencia($"Error al ejecutar consulta:\n{error.Message}");
             }
 
             return filasAfectadas;
@@ -123,7 +123,7 @@ namespace Sistema_GestionFacturacion.Clases
             }
             catch (SqlException error)
             {
-                Alertas.Realizado($"Error al ejecutar comando parametrizado:\n{error.Message}");
+                Alertas.Advertencia($"Error al ejecutar comando parametrizado:\n{error.Message}");
             }
 
             return filasAfectadas;
