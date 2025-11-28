@@ -55,16 +55,28 @@ namespace Sistema_GestionFacturacion.Formularios
 
         }
 
+      
         void LimpiarCampos()
         {
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtUsuario.Clear();
-            txtClave.Clear();
-            cmbRol.SelectedIndex = -1;
-            try { txtIdUsuario.Text = string.Empty; } catch { }
-        }
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LimpiarCampos));
+                return;
+            }
+            txtIdUsuario.Text = string.Empty;
+            txtIdUsuario.DefaultText = string.Empty;
 
+            txtNombre.Text = string.Empty;
+            txtNombre.DefaultText = string.Empty;
+            txtApellido.DefaultText = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtUsuario.DefaultText = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtClave.DefaultText = string.Empty;
+            txtClave.Text = string.Empty;   
+            cmbRol.SelectedIndex = -1;
+            cmbRol.SelectedItem = null;
+        }
         void HabilitarNuevosRegistros(bool valor)
         {
             btnGuardarRegistro.Enabled = valor;
@@ -390,6 +402,22 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
+
+
+        void Filtrando()
+        {
+            string text = txtFiltrar.Text;
+
+            DataTable dt = dgvDatos.DataSource as DataTable;
+            if (dt != null)
+            {
+                dt.DefaultView.RowFilter =
+                    $"Convert(Nombre, 'System.String') LIKE '%{text}%' OR " +
+                    $"Apellido LIKE '%{text}%' OR " +
+                    $"Usuario LIKE '%{text}%'";
+            }
+            colorColumnaEstado();
+        }
         void TestConexion()
         {
             conexion.validarConexion();
@@ -418,13 +446,6 @@ namespace Sistema_GestionFacturacion.Formularios
             ActivarDesactivarRegistros("Activo", "Inactivo");
         }
 
-        private void rbDatosActivos_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbDatosActivos.Checked)
-            {
-                MostrarRegistros("Activo");
-            }
-        }
 
         private void FormUsuariosLogin_Load(object sender, EventArgs e)
         {
@@ -452,34 +473,23 @@ namespace Sistema_GestionFacturacion.Formularios
             this.Close();
         }
 
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
-        {
-            string text = txtFiltrar.Text;
-
-            DataTable dt = dgvDatos.DataSource as DataTable;
-            if (dt != null)
-            {
-                dt.DefaultView.RowFilter =
-                    $"Convert(Nombre, 'System.String') LIKE '%{text}%' OR " +
-                    $"Apellido LIKE '%{text}%' OR " +
-                    $"Usuario LIKE '%{text}%'";
-            }
-            colorColumnaEstado();
-        }
 
         private void btnReactivarRegistro_Click(object sender, EventArgs e)
         {
             ActivarDesactivarRegistros("Inactivo", "Activo");
         }
 
-        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            EnviarDatosParaEditar(e);
-        }
-
         private void btnTestConexion_Click(object sender, EventArgs e)
         {
             TestConexion();
+        }
+
+        private void rbDatosActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbDatosActivos.Checked)
+            {
+                MostrarRegistros("Activo");
+            }
         }
 
         private void rbDatosInactivos_CheckedChanged(object sender, EventArgs e)
@@ -488,6 +498,21 @@ namespace Sistema_GestionFacturacion.Formularios
             {
                 MostrarRegistros("Inactivo");
             }
+        }
+
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            Filtrando();
+        }
+
+        private void DGVDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
+        }
+
+        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
