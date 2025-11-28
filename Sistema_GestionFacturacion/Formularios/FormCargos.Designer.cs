@@ -29,87 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCargos));
-            this.label10 = new System.Windows.Forms.Label();
-            this.rbDatosInactivos = new System.Windows.Forms.RadioButton();
-            this.rbDatosActivos = new System.Windows.Forms.RadioButton();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTestConexion = new System.Windows.Forms.ToolStripMenuItem();
             this.btnActualizarDGV = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReactivarRegistro = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDesactivarRegistro = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.btnCancelarRegistro = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNuevoRegistro = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnGuardarRegistro = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtIdCargos = new System.Windows.Forms.TextBox();
-            this.txtCargos = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtFiltrar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.rbDatosInactivos = new System.Windows.Forms.RadioButton();
+            this.rbDatosActivos = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtCargos = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIdCargos = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblOperacion = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label10.Location = new System.Drawing.Point(31, 366);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 20);
-            this.label10.TabIndex = 58;
-            this.label10.Text = "Filtrar";
-            // 
-            // rbDatosInactivos
-            // 
-            this.rbDatosInactivos.AutoSize = true;
-            this.rbDatosInactivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDatosInactivos.Location = new System.Drawing.Point(1028, 365);
-            this.rbDatosInactivos.Margin = new System.Windows.Forms.Padding(4);
-            this.rbDatosInactivos.Name = "rbDatosInactivos";
-            this.rbDatosInactivos.Size = new System.Drawing.Size(179, 24);
-            this.rbDatosInactivos.TabIndex = 61;
-            this.rbDatosInactivos.TabStop = true;
-            this.rbDatosInactivos.Text = "Registros Inactivos";
-            this.rbDatosInactivos.UseVisualStyleBackColor = true;
-            this.rbDatosInactivos.CheckedChanged += new System.EventHandler(this.rbDatosInactivos_CheckedChanged);
-            // 
-            // rbDatosActivos
-            // 
-            this.rbDatosActivos.AutoSize = true;
-            this.rbDatosActivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDatosActivos.Location = new System.Drawing.Point(844, 364);
-            this.rbDatosActivos.Margin = new System.Windows.Forms.Padding(4);
-            this.rbDatosActivos.Name = "rbDatosActivos";
-            this.rbDatosActivos.Size = new System.Drawing.Size(167, 24);
-            this.rbDatosActivos.TabIndex = 60;
-            this.rbDatosActivos.TabStop = true;
-            this.rbDatosActivos.Text = "Registros Activos";
-            this.rbDatosActivos.UseVisualStyleBackColor = true;
-            this.rbDatosActivos.CheckedChanged += new System.EventHandler(this.rbDatosActivos_CheckedChanged);
-            // 
-            // dgvDatos
-            // 
-            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(35, 396);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.RowHeadersWidth = 51;
-            this.dgvDatos.Size = new System.Drawing.Size(1184, 250);
-            this.dgvDatos.TabIndex = 56;
-            this.dgvDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellDoubleClick);
             // 
             // btnSalir
             // 
@@ -163,15 +111,6 @@
             this.btnDesactivarRegistro.Text = "Desactivar Registro";
             this.btnDesactivarRegistro.Click += new System.EventHandler(this.btnDesactivarRegistro_Click);
             // 
-            // txtFiltrar
-            // 
-            this.txtFiltrar.Location = new System.Drawing.Point(98, 367);
-            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(389, 22);
-            this.txtFiltrar.TabIndex = 59;
-            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
-            // 
             // btnCancelarRegistro
             // 
             this.btnCancelarRegistro.Enabled = false;
@@ -195,7 +134,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DarkCyan;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
             this.menuStrip1.Font = new System.Drawing.Font("Dubai", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -209,7 +148,7 @@
             this.btnSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1366, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1291, 40);
             this.menuStrip1.TabIndex = 57;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -224,138 +163,281 @@
             this.btnGuardarRegistro.Text = "Guardar";
             this.btnGuardarRegistro.Click += new System.EventHandler(this.btnGuardarRegistro_Click);
             // 
-            // txtIdCargos
+            // guna2Panel1
             // 
-            this.txtIdCargos.Enabled = false;
-            this.txtIdCargos.Location = new System.Drawing.Point(145, 25);
-            this.txtIdCargos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdCargos.Name = "txtIdCargos";
-            this.txtIdCargos.Size = new System.Drawing.Size(117, 23);
-            this.txtIdCargos.TabIndex = 57;
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.Controls.Add(this.txtFiltrar);
+            this.guna2Panel1.Controls.Add(this.dgvDatos);
+            this.guna2Panel1.Controls.Add(this.rbDatosInactivos);
+            this.guna2Panel1.Controls.Add(this.rbDatosActivos);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.FillColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Panel1.Location = new System.Drawing.Point(457, 92);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(804, 366);
+            this.guna2Panel1.TabIndex = 66;
+            // 
+            // txtFiltrar
+            // 
+            this.txtFiltrar.BackColor = System.Drawing.Color.Transparent;
+            this.txtFiltrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtFiltrar.BorderRadius = 8;
+            this.txtFiltrar.BorderThickness = 0;
+            this.txtFiltrar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFiltrar.DefaultText = "";
+            this.txtFiltrar.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFiltrar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.txtFiltrar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtFiltrar.ForeColor = System.Drawing.Color.Gray;
+            this.txtFiltrar.Location = new System.Drawing.Point(77, 25);
+            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtFiltrar.Name = "txtFiltrar";
+            this.txtFiltrar.PlaceholderText = "";
+            this.txtFiltrar.SelectedText = "";
+            this.txtFiltrar.Size = new System.Drawing.Size(321, 33);
+            this.txtFiltrar.TabIndex = 78;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged_1);
+            // 
+            // dgvDatos
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDatos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(23, 66);
+            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.RowHeadersWidth = 51;
+            this.dgvDatos.Size = new System.Drawing.Size(759, 281);
+            this.dgvDatos.TabIndex = 56;
+            this.dgvDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellDoubleClick_1);
+            // 
+            // rbDatosInactivos
+            // 
+            this.rbDatosInactivos.AutoSize = true;
+            this.rbDatosInactivos.BackColor = System.Drawing.Color.Transparent;
+            this.rbDatosInactivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDatosInactivos.ForeColor = System.Drawing.Color.White;
+            this.rbDatosInactivos.Location = new System.Drawing.Point(592, 28);
+            this.rbDatosInactivos.Margin = new System.Windows.Forms.Padding(4);
+            this.rbDatosInactivos.Name = "rbDatosInactivos";
+            this.rbDatosInactivos.Size = new System.Drawing.Size(179, 24);
+            this.rbDatosInactivos.TabIndex = 61;
+            this.rbDatosInactivos.TabStop = true;
+            this.rbDatosInactivos.Text = "Registros Inactivos";
+            this.rbDatosInactivos.UseVisualStyleBackColor = false;
+            this.rbDatosInactivos.CheckedChanged += new System.EventHandler(this.rbDatosInactivos_CheckedChanged);
+            // 
+            // rbDatosActivos
+            // 
+            this.rbDatosActivos.AutoSize = true;
+            this.rbDatosActivos.BackColor = System.Drawing.Color.Transparent;
+            this.rbDatosActivos.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDatosActivos.ForeColor = System.Drawing.Color.White;
+            this.rbDatosActivos.Location = new System.Drawing.Point(408, 28);
+            this.rbDatosActivos.Margin = new System.Windows.Forms.Padding(4);
+            this.rbDatosActivos.Name = "rbDatosActivos";
+            this.rbDatosActivos.Size = new System.Drawing.Size(167, 24);
+            this.rbDatosActivos.TabIndex = 60;
+            this.rbDatosActivos.TabStop = true;
+            this.rbDatosActivos.Text = "Registros Activos";
+            this.rbDatosActivos.UseVisualStyleBackColor = false;
+            this.rbDatosActivos.CheckedChanged += new System.EventHandler(this.rbDatosActivos_CheckedChanged_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(19, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Filtrar";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.Controls.Add(this.label4);
+            this.guna2Panel2.Controls.Add(this.txtCargos);
+            this.guna2Panel2.Controls.Add(this.label6);
+            this.guna2Panel2.Controls.Add(this.txtIdCargos);
+            this.guna2Panel2.Controls.Add(this.lblEstado);
+            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.FillColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Panel2.Location = new System.Drawing.Point(13, 89);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(417, 369);
+            this.guna2Panel2.TabIndex = 67;
             // 
             // txtCargos
             // 
+            this.txtCargos.BackColor = System.Drawing.Color.Transparent;
+            this.txtCargos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtCargos.BorderRadius = 8;
+            this.txtCargos.BorderThickness = 0;
+            this.txtCargos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCargos.DefaultText = "";
             this.txtCargos.Enabled = false;
-            this.txtCargos.Location = new System.Drawing.Point(151, 60);
-            this.txtCargos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCargos.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtCargos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.txtCargos.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtCargos.ForeColor = System.Drawing.Color.Gray;
+            this.txtCargos.Location = new System.Drawing.Point(33, 177);
+            this.txtCargos.Margin = new System.Windows.Forms.Padding(5);
             this.txtCargos.Name = "txtCargos";
-            this.txtCargos.Size = new System.Drawing.Size(455, 23);
-            this.txtCargos.TabIndex = 24;
+            this.txtCargos.PlaceholderText = "Ejemplo: Empleado";
+            this.txtCargos.SelectedText = "";
+            this.txtCargos.Size = new System.Drawing.Size(203, 33);
+            this.txtCargos.TabIndex = 75;
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "IdCargos";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(28, 153);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 20);
+            this.label6.TabIndex = 74;
+            this.label6.Text = "Cargos";
+            // 
+            // txtIdCargos
+            // 
+            this.txtIdCargos.BackColor = System.Drawing.Color.Transparent;
+            this.txtIdCargos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtIdCargos.BorderRadius = 8;
+            this.txtIdCargos.BorderThickness = 0;
+            this.txtIdCargos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdCargos.DefaultText = "0";
+            this.txtIdCargos.Enabled = false;
+            this.txtIdCargos.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtIdCargos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.txtIdCargos.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtIdCargos.ForeColor = System.Drawing.Color.Gray;
+            this.txtIdCargos.Location = new System.Drawing.Point(33, 106);
+            this.txtIdCargos.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIdCargos.Name = "txtIdCargos";
+            this.txtIdCargos.PlaceholderText = "";
+            this.txtIdCargos.SelectedText = "";
+            this.txtIdCargos.Size = new System.Drawing.Size(144, 33);
+            this.txtIdCargos.TabIndex = 73;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblEstado.Location = new System.Drawing.Point(614, 108);
+            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.White;
+            this.lblEstado.Location = new System.Drawing.Point(207, 110);
             this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(62, 20);
-            this.lblEstado.TabIndex = 64;
+            this.lblEstado.Size = new System.Drawing.Size(61, 29);
+            this.lblEstado.TabIndex = 72;
             this.lblEstado.Text = "Estado";
-            this.lblEstado.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(28, 81);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 20);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "IdCargo";
             // 
             // lblOperacion
             // 
             this.lblOperacion.AutoSize = true;
-            this.lblOperacion.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOperacion.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblOperacion.Location = new System.Drawing.Point(31, 108);
+            this.lblOperacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblOperacion.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperacion.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblOperacion.Location = new System.Drawing.Point(13, 56);
             this.lblOperacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(64, 20);
-            this.lblOperacion.TabIndex = 63;
-            this.lblOperacion.Text = "Cargos";
+            this.lblOperacion.Size = new System.Drawing.Size(87, 29);
+            this.lblOperacion.TabIndex = 72;
+            this.lblOperacion.Text = "Operacion";
             this.lblOperacion.Visible = false;
             // 
-            // panel1
+            // label4
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Controls.Add(this.txtIdCargos);
-            this.panel1.Controls.Add(this.txtCargos);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(35, 131);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(641, 123);
-            this.panel1.TabIndex = 62;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(49, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Cargos";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(85, 33);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 36);
+            this.label4.TabIndex = 73;
+            this.label4.Text = "Cargos";
             // 
             // FormCargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 723);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.rbDatosInactivos);
-            this.Controls.Add(this.rbDatosActivos);
-            this.Controls.Add(this.dgvDatos);
-            this.Controls.Add(this.txtFiltrar);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.lblEstado);
+            this.ClientSize = new System.Drawing.Size(1291, 483);
             this.Controls.Add(this.lblOperacion);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCargos";
             this.Text = "Cargos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton rbDatosInactivos;
-        private System.Windows.Forms.RadioButton rbDatosActivos;
-        private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.ToolStripMenuItem btnSalir;
         private System.Windows.Forms.ToolStripMenuItem btnTestConexion;
         private System.Windows.Forms.ToolStripMenuItem btnActualizarDGV;
         private System.Windows.Forms.ToolStripMenuItem btnReactivarRegistro;
         private System.Windows.Forms.ToolStripMenuItem btnDesactivarRegistro;
-        private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.ToolStripMenuItem btnCancelarRegistro;
         private System.Windows.Forms.ToolStripMenuItem btnNuevoRegistro;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnGuardarRegistro;
-        private System.Windows.Forms.TextBox txtIdCargos;
-        private System.Windows.Forms.TextBox txtCargos;
-        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtFiltrar;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.RadioButton rbDatosInactivos;
+        private System.Windows.Forms.RadioButton rbDatosActivos;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtCargos;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdCargos;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblOperacion;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

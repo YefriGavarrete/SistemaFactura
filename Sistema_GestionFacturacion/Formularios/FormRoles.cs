@@ -22,10 +22,19 @@ namespace Sistema_GestionFacturacion.Formularios
             MostrarRegistros("Activo");
             rbDatosActivos.Checked = true;
         }
+
         void LimpiarCampos()
         {
-            txtIdRol.Clear();
-            txtRoles.Clear();
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LimpiarCampos));
+                return;
+            }
+            txtIdRol.Text = string.Empty;
+            txtIdRol.DefaultText = string.Empty;
+            txtRoles.Text = string.Empty;
+            txtRoles.DefaultText = string.Empty;
+
         }
 
         void HabilitarNuevosRegistros(bool valor)
@@ -200,6 +209,18 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
+        void Filtrando()
+        {
+            string texto = txtFiltrar.Text;
+            DataTable dt = dgvDatos.DataSource as DataTable;
+            if (dt != null)
+            {
+                dt.DefaultView.RowFilter =
+                    $"Convert(Rol, 'System.String') LIKE '%{texto}%'";
+            }
+            colorColumnaEstado();
+        }
+
         private void btnNuevoRegistro_Click(object sender, EventArgs e)
         {
             lblOperacion.Text = "Registrando";
@@ -247,29 +268,12 @@ namespace Sistema_GestionFacturacion.Formularios
             this.Close();
         }
 
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
-        {
-            string texto = txtFiltrar.Text;
-            DataTable dt = dgvDatos.DataSource as DataTable;
-            if (dt != null)
-            {
-                dt.DefaultView.RowFilter =
-                    $"Convert(Rol, 'System.String') LIKE '%{texto}%'";
-            }
-            colorColumnaEstado();
-        }
 
         private void btnReactivarRegistro_Click(object sender, EventArgs e)
         {
             ActivarDesactivarRegistro("Inactivo", "Activo");
            
         }
-
-        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            EnviarDatosParaEditar(e);
-        }
-
         private void btnDesactivarRegistro_Click(object sender, EventArgs e)
         {
             ActivarDesactivarRegistro("Activo", "Inactivo");
@@ -279,7 +283,7 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             if (rbDatosActivos.Checked)
             {
-               MostrarRegistros("Activo");
+                MostrarRegistros("Activo");
             }
         }
 
@@ -291,9 +295,14 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
-        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
+            Filtrando();
+        }
 
+        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
         }
     }
 }

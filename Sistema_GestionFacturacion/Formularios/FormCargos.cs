@@ -27,10 +27,16 @@ namespace Sistema_GestionFacturacion.Formularios
 
         void LimpiarCampos()
         {
-            txtIdCargos.Clear();
-            txtCargos.Clear();
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LimpiarCampos));
+                return;
+            }
+            txtIdCargos.Text = string.Empty;
+            txtIdCargos.DefaultText = string.Empty;
+            txtCargos.Text = string.Empty;
+            txtCargos.DefaultText = string.Empty;
         }
-
         void HabilitarNuevosRegistros(bool valor)
         {
             btnGuardarRegistro.Enabled = valor;
@@ -214,6 +220,19 @@ namespace Sistema_GestionFacturacion.Formularios
             }
         }
 
+
+        void Filtrado()
+        {
+            string texto = txtFiltrar.Text;
+            DataTable dt = dgvDatos.DataSource as DataTable;
+            if (dt != null)
+            {
+                dt.DefaultView.RowFilter = $"Convert(Cargo, 'System.String') LIKE '%{texto}%'";
+            }
+            colorColumnaEstado();
+
+        }
+
         private void btnNuevoRegistro_Click(object sender, EventArgs e)
         {
             lblOperacion.Text = "Registrando";
@@ -269,35 +288,29 @@ namespace Sistema_GestionFacturacion.Formularios
             this.Close();
         }
 
+        private void rbDatosActivos_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (rbDatosActivos.Checked)
+            {
+                MostrarRegistros("Activo");
+            }
+
+        }
+
         private void rbDatosInactivos_CheckedChanged(object sender, EventArgs e)
         {
             if (rbDatosInactivos.Checked)
             {
                 MostrarRegistros("Inactivo");
             }
-        }
 
-        private void rbDatosActivos_CheckedChanged(object sender, EventArgs e)
+        }
+        private void txtFiltrar_TextChanged_1(object sender, EventArgs e)
         {
-            if (rbDatosActivos.Checked)
-            {
-                MostrarRegistros("Activo");
-            }
+            Filtrado();
         }
 
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
-        {
-            string texto = txtFiltrar.Text;
-            DataTable dt = dgvDatos.DataSource as DataTable;
-            if (dt != null)
-            {
-                dt.DefaultView.RowFilter = $"Convert(Cargo, 'System.String') LIKE '%{texto}%'";
-            }
-            colorColumnaEstado();
-
-        }
-
-        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDatos_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             EnviarDatosParaEditar(e);
         }
