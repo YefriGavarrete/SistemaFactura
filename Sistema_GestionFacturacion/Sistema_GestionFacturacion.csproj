@@ -93,6 +93,12 @@
     <Compile Include="Formularios\FormEmpleado.Designer.cs">
       <DependentUpon>FormEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormHistorialFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormHistorialFacturas.Designer.cs">
+      <DependentUpon>FormHistorialFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="Formularios\FormProcesoPago.Designer.cs">
       <DependentUpon>FormProcesoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormProductos.Designer.cs">
+      <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormRoles.cs">
       <SubType>Form</SubType>
@@ -152,6 +164,9 @@
     <EmbeddedResource Include="Formularios\FormEmpleado.resx">
       <DependentUpon>FormEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormHistorialFacturas.resx">
+      <DependentUpon>FormHistorialFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormProcesoPago.resx">
       <DependentUpon>FormProcesoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormProductos.resx">
+      <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormRoles.resx">
       <DependentUpon>FormRoles.cs</DependentUpon>

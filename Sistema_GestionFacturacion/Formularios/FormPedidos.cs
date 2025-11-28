@@ -22,7 +22,7 @@ namespace Sistema_GestionFacturacion.Formularios
     {
         ConsultasSQL consultas = new ConsultasSQL();
         AlertasDelSistema Alertas = new AlertasDelSistema();
-        ClaseProcesoPago procesoPago;
+        //ClaseProcesoPago procesoPago;
 
         int IdUsuario;
         string rolUsario;
@@ -178,6 +178,10 @@ namespace Sistema_GestionFacturacion.Formularios
 
                 btnCrearPedido.Enabled = false;
                 btnBuscarProductos.Enabled = true;
+
+                txtNombre.Enabled = false;
+                txtApellido.Enabled = false;
+                txtDNI.Enabled = false;
             }
             else
             {
@@ -335,10 +339,10 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             DGVDatos.Rows.Clear();
 
-            txtIdPedido.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDNI.Clear();
+            txtIdPedido.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtDNI.Text = "";
             txtSubtotal.Text = "00.00";
             txtTotal.Text = "00.00";
 
@@ -694,12 +698,6 @@ namespace Sistema_GestionFacturacion.Formularios
             txtDNI.Enabled = true;
         }
 
-        private void btnBuscarProductos_Click(object sender, EventArgs e)
-        {
-            FormBuscarProductos frm = new FormBuscarProductos();
-            frm.ShowDialog();
-        }
-
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
              int idPedido= int.Parse(txtIdPedido.Text);
@@ -726,6 +724,17 @@ namespace Sistema_GestionFacturacion.Formularios
         private void FormPedidos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+           this.Close();
+        }
+
+        private void btnBuscarProductos_Click_1(object sender, EventArgs e)
+        {
+            FormBuscarProductos frm = new FormBuscarProductos();
+            frm.ShowDialog();
         }
     }
 }

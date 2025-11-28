@@ -20,7 +20,7 @@ namespace Sistema_GestionFacturacion.Formularios
 
         public ClaseProcesoPago procesoPago;
         private FormPedidos f1;
-
+        AlertasDelSistema Alertas = new AlertasDelSistema();
         public FormProcesoPago(FormPedidos formPedidos, int idPedido, string nombreCliente, string apellidoCliente, decimal TotalPagar)
         {
             InitializeComponent();
@@ -41,12 +41,15 @@ namespace Sistema_GestionFacturacion.Formularios
             txtIDPedido.Text = idPedidoGlobal.ToString();
             txtNombre.Text = nombreClienteGlobal;
             txtApellido.Text = apellidoClienteGlobal;
-            txtTotalPagar.Text = totalPagarGlobal.ToString("C2");
+            txtTotalPagar.Text = totalPagarGlobal.ToString(/*"C2"*/);
 
 
         }
         void TipoPago()
         {
+            if (cmbMetodoPago.SelectedItem == null)
+                return;
+
             string tipoPago = cmbMetodoPago.SelectedItem.ToString();
 
             string transferencia = "Transferencia";
@@ -57,37 +60,76 @@ namespace Sistema_GestionFacturacion.Formularios
                 lblTarjetaEfectivo.Text = "Número de Tarjeta:";
                 lblCvcCambio.Text = "CVC de Tarjeta:";
 
+                txtTarjetaEfectivo.Enabled = true;
+                txtTarjetaEfectivo.ReadOnly = false;
+
                 txtCVCCambio.Enabled = true;
+                txtCVCCambio.ReadOnly = false;
+
+                txtTarjetaEfectivo.Clear();
+                txtCVCCambio.Clear();
+
+                txtTarjetaEfectivo.PlaceholderText = "0000 0000 0000 0000";
+                txtCVCCambio.PlaceholderText = "000";
             }
             else if (tipoPago == efectivo)
             {
                 lblTarjetaEfectivo.Text = "Efectivo Recibido:";
                 lblCvcCambio.Text = "Cambio a Entregar:";
 
-                txtCVCCambio.Enabled = false;
+                txtTarjetaEfectivo.Enabled = true;
+                txtTarjetaEfectivo.ReadOnly = false;
+
+                txtCVCCambio.Enabled = false;  
+                txtCVCCambio.ReadOnly = true;
+
+                txtTarjetaEfectivo.Clear();
+                txtCVCCambio.Clear();
+
+                txtTarjetaEfectivo.PlaceholderText = "00.00";
+                txtCVCCambio.PlaceholderText = "00.00";
             }
         }
 
-        void EventoTextChanged()
+        bool ValidarTransferencia()
         {
-            string tipoPago = " ";
-            string efectivo = "Efectivo";
-            
-            if (tipoPago == efectivo)
+            // Validar tarjeta: exactamente 16 digitos
+            if (!txtTarjetaEfectivo.Text.All(char.IsDigit) || txtTarjetaEfectivo.Text.Length != 16)
             {
-                decimal efectivoRecibido = 0;
-                decimal cambio = 0;
-                if (decimal.TryParse(txtCVCCambio.Text, out efectivoRecibido))
-                {
-                    cambio = efectivoRecibido - totalPagarGlobal;
-                    txtCVCCambio.Text = cambio.ToString("C2");
-                }
-                else
-                {
-                    txtCVCCambio.Text = "00.00";
-                }
+                Alertas.Advertencia("El numero de tarjeta debe tener exactamente 16 digitos numericos.");
+                return false;
             }
+
+            // Validar CVC: exactamente 3 digitos
+            if (!txtCVCCambio.Text.All(char.IsDigit) || txtCVCCambio.Text.Length != 3)
+            {
+                Alertas.Advertencia("El CVC debe tener exactamente 3 dígitos numericos.");
+                return false;
+            }
+
+            return true;
         }
+
+        bool ValidarEfectivo()
+        {
+            decimal efectivo;
+
+            // Verificar que sea numero decimal valido
+            if (!decimal.TryParse(txtTarjetaEfectivo.Text, out efectivo))
+            {
+                MessageBox.Show("Ingrese un monto válido en efectivo.");
+                return false;
+            }
+
+            if (efectivo < totalPagarGlobal)
+            {
+                MessageBox.Show("El efectivo recibido es menor al total a pagar.");
+                return false;
+            }
+
+            return true;
+        }
+
 
         void EnviarAFormPedidos()
         {
@@ -113,12 +155,58 @@ namespace Sistema_GestionFacturacion.Formularios
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+
+            string tipoPago = cmbMetodoPago.SelectedItem.ToString();
+
+            if (tipoPago == "Transferencia")
+            {
+                if (!ValidarTransferencia())
+                    return;
+
+                Alertas.Realizado("Pago por transferencia validado.");
+            }
+            else if (tipoPago == "Efectivo")
+            {
+                if (!ValidarEfectivo())
+                    return;
+
+                Alertas.Realizado("Pago en efectivo validado.");
+            }
+
             EnviarAFormPedidos();
         }
 
         private void txtTarjetaEfectivo_TextChanged(object sender, EventArgs e)
         {
-            EventoTextChanged();
+            if (cmbMetodoPago.SelectedItem == null)
+                return;
+
+            // solo calcula cambio si es efectivo
+            if (cmbMetodoPago.SelectedItem.ToString() != "Efectivo")
+                return;
+
+            // si esta vacio, limpiar y salir SIN BLOQUEAR
+            if (string.IsNullOrWhiteSpace(txtTarjetaEfectivo.Text))
+            {
+                txtCVCCambio.Text = "";
+                return;
+            }
+
+            // convertir de manera segura
+            decimal efectivo;
+            bool ok = decimal.TryParse(txtTarjetaEfectivo.Text, out efectivo);
+
+            if (!ok)
+            {
+                txtCVCCambio.Text = "";
+                return;
+            }
+
+            // calcular el cambio
+            decimal cambio = efectivo - totalPagarGlobal;
+
+            // mostrar con formato monetario
+            txtCVCCambio.Text = cambio.ToString("C2");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -150,7 +150,7 @@
             this.txtCVCCambio.FillColor = System.Drawing.Color.WhiteSmoke;
             this.txtCVCCambio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtCVCCambio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCVCCambio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtCVCCambio.ForeColor = System.Drawing.Color.Gray;
             this.txtCVCCambio.Location = new System.Drawing.Point(30, 447);
             this.txtCVCCambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCVCCambio.Name = "txtCVCCambio";
@@ -183,7 +183,7 @@
             this.txtTarjetaEfectivo.FillColor = System.Drawing.Color.WhiteSmoke;
             this.txtTarjetaEfectivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtTarjetaEfectivo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTarjetaEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtTarjetaEfectivo.ForeColor = System.Drawing.Color.Gray;
             this.txtTarjetaEfectivo.Location = new System.Drawing.Point(28, 383);
             this.txtTarjetaEfectivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTarjetaEfectivo.Name = "txtTarjetaEfectivo";

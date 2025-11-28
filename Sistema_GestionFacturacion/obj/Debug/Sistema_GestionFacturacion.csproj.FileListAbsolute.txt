@@ -15,6 +15,7 @@ C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistem
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormMenu.resources
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormPedidos.resources
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormProcesoPago.resources
+C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormProductos.resources
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormRoles.resources
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormUsuariosLogin.resources
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.Login.resources
@@ -26,3 +27,4 @@ C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistem
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.exe
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.pdb
 C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.exe.config
+C:\Users\braya\source\repos\SistemaF\Sistema_GestionFacturacion\obj\Debug\Sistema_GestionFacturacion.Formularios.FormHistorialFacturas.resources

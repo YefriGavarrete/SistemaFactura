@@ -274,5 +274,17 @@ namespace Sistema_GestionFacturacion.Formularios
             var pedidos = new FormPedidos(idUsuario, rolUsuario, nombreUsuario, apellidoUsuario, EstadoPago, MetodooPago);
             AbrirFormHijo(pedidos);
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            var form = new FormProductos();
+            AbrirFormHijo(form);
+        }
+
+        private void btnHistorialFacturas_Click(object sender, EventArgs e)
+        {
+            var form = new FormHistorialFacturas();
+            AbrirFormHijo(form);
+        }
     }
 }

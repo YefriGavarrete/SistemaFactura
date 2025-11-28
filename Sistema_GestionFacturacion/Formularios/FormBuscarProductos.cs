@@ -13,7 +13,7 @@ namespace Sistema_GestionFacturacion.Formularios
 {
     public partial class FormBuscarProductos : Form
     {
-        AlertasDelSistema Alertas = new AlertasDelSistema();
+        AlertasDelSistema Alerta = new AlertasDelSistema();
         ConsultasSQL consulta = new ConsultasSQL();
 
         public FormBuscarProductos()
@@ -53,7 +53,7 @@ namespace Sistema_GestionFacturacion.Formularios
             }
             catch (Exception ex)
             {
-                Alertas.Advertencia($"Error al mostrar registros: {ex.Message}");
+                Alerta.Advertencia($"Error al mostrar registros: {ex.Message}");
             }
         }
         void CargarTextBox(DataGridViewCellEventArgs e)
@@ -95,12 +95,25 @@ namespace Sistema_GestionFacturacion.Formularios
             }
             catch (Exception ex)
             {
-                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+                Alerta.Advertencia($"Error al cargar datos: {ex.Message}");
             }
         }
 
         private void EnviarAPedidos()
         {
+            //si los textbox estan vacios
+            if (string.IsNullOrEmpty(txtIdProducto.Text) ||
+                string.IsNullOrEmpty(txtCodigo.Text) ||
+                string.IsNullOrEmpty(txtCategoria.Text) ||
+                string.IsNullOrEmpty(txtMarca.Text) ||
+                string.IsNullOrEmpty(txtModelo.Text) ||
+                string.IsNullOrEmpty(txtPrecio.Text) ||
+                string.IsNullOrEmpty(txtDescuento.Text))
+            {
+                Alerta.Advertencia("Por favor, seleccione un producto para agregar.");
+                return;
+            }
+            
             // Instancia del formulario destino
             FormPedidos pedidosForm = (FormPedidos)Application.OpenForms["FormPedidos"];
 
@@ -119,12 +132,12 @@ namespace Sistema_GestionFacturacion.Formularios
                     txtDescuento.Text
                 );
 
-                MessageBox.Show("Producto agregado al pedido correctamente.");
+                //Alerta.Realizado("Producto agregado al pedido correctamente.");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("El formulario de pedidos no está abierto.");
+                Alerta.Advertencia("El formulario de pedidos no está abierto.");
             }
         }
 
@@ -144,14 +157,25 @@ namespace Sistema_GestionFacturacion.Formularios
             MostrarRegistros2();
         }
 
+        private void btnTestConexion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             CargarTextBox(e);
         }
 
-        private void btnTestConexion_Click(object sender, EventArgs e)
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-
+            //filtrarDatos(txtFiltrar.Text);
         }
     }
 }

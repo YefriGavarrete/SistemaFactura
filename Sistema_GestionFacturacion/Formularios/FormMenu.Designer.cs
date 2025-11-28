@@ -157,6 +157,7 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnHistorialFacturas.TabIndex = 19;
             this.btnHistorialFacturas.Text = "HISTORIAL FACTURAS";
             this.btnHistorialFacturas.TextOffset = new System.Drawing.Point(0, 10);
+            this.btnHistorialFacturas.Click += new System.EventHandler(this.btnHistorialFacturas_Click);
             // 
             // btnUsuarios
             // 
@@ -250,6 +251,7 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnProductos.Size = new System.Drawing.Size(165, 114);
             this.btnProductos.TabIndex = 17;
             this.btnProductos.Text = "PRODUCTOS";
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnEmpleado
             // 
