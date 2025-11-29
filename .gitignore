@@ -1,11 +1,15 @@
-# Archivos de depuración y compilación
+# Cache y archivos de usuario de Visual Studio
+.vs/
+*.suo
+
+# Binarios de compilación
 [Bb]in/
 [Oo]bj/
+
+# Paquetes de NuGet (la carpeta packages/)
+packages/
+
+# Archivos de depuración
 *.exe
 *.pdb
-
-# Caché de Visual Studio (carpeta .vs/)
-**/.vs/
-
-# (Librerías de NuGet)
-packages/
+*.cache
