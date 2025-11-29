@@ -402,7 +402,7 @@ namespace Sistema_GestionFacturacion.Formularios
                 tablaEncabezado.DefaultCell.Border = PdfPCell.NO_BORDER;
 
                 // ---------- COLUMNA 1: LOGO ----------
-                string rutaLogo = Application.StartupPath + @"\Empresa\LogotipoEmpresa.png";
+                string rutaLogo = Application.StartupPath + @"\Facturas\Empresa\LOGO.jpg";
                 PdfPCell celdaLogo;
 
                 if (File.Exists(rutaLogo))
