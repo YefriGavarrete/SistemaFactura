@@ -24,16 +24,24 @@ namespace Sistema_GestionFacturacion.Formularios
         }
         void LimpiarCampos()
         {
-            txtIdRol.Clear();
-            txtRoles.Clear();
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LimpiarCampos));
+                return;
+            }
+            txtIdRol.Text = string.Empty;
+            txtIdRol.DefaultText = string.Empty;
+            txtRoles.Text = string.Empty;
+            txtRoles.DefaultText = string.Empty;
+
         }
 
         void HabilitarNuevosRegistros(bool valor)
         {
-            
+
             btnGuardarRegistro.Enabled = valor;
             btnCancelarRegistro.Enabled = valor;
-            txtRoles.Enabled = valor;    
+            txtRoles.Enabled = valor;
             btnNuevoRegistro.Enabled = !valor;
         }
 
@@ -247,7 +255,18 @@ namespace Sistema_GestionFacturacion.Formularios
             this.Close();
         }
 
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        private void btnReactivarRegistro_Click(object sender, EventArgs e)
+        {
+            ActivarDesactivarRegistro("Inactivo", "Activo");
+           
+        }
+
+        private void btnDesactivarRegistro_Click(object sender, EventArgs e)
+        {
+            ActivarDesactivarRegistro("Activo", "Inactivo");
+        }
+
+        private void txtFiltrar_TextChanged_1(object sender, EventArgs e)
         {
             string texto = txtFiltrar.Text;
             DataTable dt = dgvDatos.DataSource as DataTable;
@@ -259,27 +278,16 @@ namespace Sistema_GestionFacturacion.Formularios
             colorColumnaEstado();
         }
 
-        private void btnReactivarRegistro_Click(object sender, EventArgs e)
-        {
-            ActivarDesactivarRegistro("Inactivo", "Activo");
-           
-        }
-
         private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EnviarDatosParaEditar(e);
         }
 
-        private void btnDesactivarRegistro_Click(object sender, EventArgs e)
-        {
-            ActivarDesactivarRegistro("Activo", "Inactivo");
-        }
-
-        private void rbDatosActivos_CheckedChanged(object sender, EventArgs e)
+        private void rbDatosActivos_CheckedChanged_1(object sender, EventArgs e)
         {
             if (rbDatosActivos.Checked)
             {
-               MostrarRegistros("Activo");
+                MostrarRegistros("Activo");
             }
         }
 
@@ -289,11 +297,6 @@ namespace Sistema_GestionFacturacion.Formularios
             {
                 MostrarRegistros("Inactivo");
             }
-        }
-
-        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

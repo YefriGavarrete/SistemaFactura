@@ -57,14 +57,26 @@ namespace Sistema_GestionFacturacion.Formularios
 
         void LimpiarCampos()
         {
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtUsuario.Clear();
-            txtClave.Clear();
-            cmbRol.SelectedIndex = -1;
-            try { txtIdUsuario.Text = string.Empty; } catch { }
-        }
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LimpiarCampos));
+                return;
+            }
+            txtIdUsuario.Text = string.Empty;
+            txtIdUsuario.DefaultText = string.Empty;
 
+            txtNombre.Text = string.Empty;
+            txtNombre.DefaultText = string.Empty;
+            txtApellido.DefaultText = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtUsuario.DefaultText = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtClave.DefaultText = string.Empty;
+            txtClave.Text = string.Empty;
+            cmbRol.SelectedIndex = -1;
+            cmbRol.SelectedItem = null;
+            lblEstado.Visible = false;
+        }
         void HabilitarNuevosRegistros(bool valor)
         {
             btnGuardarRegistro.Enabled = valor;
@@ -436,7 +448,7 @@ namespace Sistema_GestionFacturacion.Formularios
             HabilitarNuevosRegistros(false);
             btnDesactivarRegistro.Enabled = false;
             btnReactivarRegistro.Enabled = false;
-            lblEstado.Visible = false;
+            //lblEstado.Visible = false;
             LimpiarCampos();
         }
 
@@ -452,7 +464,18 @@ namespace Sistema_GestionFacturacion.Formularios
             this.Close();
         }
 
-        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+
+        private void btnReactivarRegistro_Click(object sender, EventArgs e)
+        {
+            ActivarDesactivarRegistros("Inactivo", "Activo");
+        }
+
+        private void btnTestConexion_Click(object sender, EventArgs e)
+        {
+            TestConexion();
+        }
+
+        private void txtFiltrar_TextChanged_1(object sender, EventArgs e)
         {
             string text = txtFiltrar.Text;
 
@@ -467,19 +490,12 @@ namespace Sistema_GestionFacturacion.Formularios
             colorColumnaEstado();
         }
 
-        private void btnReactivarRegistro_Click(object sender, EventArgs e)
+        private void rbDatosActivos_CheckedChanged_1(object sender, EventArgs e)
         {
-            ActivarDesactivarRegistros("Inactivo", "Activo");
-        }
-
-        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            EnviarDatosParaEditar(e);
-        }
-
-        private void btnTestConexion_Click(object sender, EventArgs e)
-        {
-            TestConexion();
+            if (rbDatosActivos.Checked)
+            {
+                MostrarRegistros("Activo");
+            }
         }
 
         private void rbDatosInactivos_CheckedChanged(object sender, EventArgs e)
@@ -488,6 +504,11 @@ namespace Sistema_GestionFacturacion.Formularios
             {
                 MostrarRegistros("Inactivo");
             }
+        }
+
+        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
         }
     }
 }

@@ -402,7 +402,7 @@ namespace Sistema_GestionFacturacion.Formularios
                 tablaEncabezado.DefaultCell.Border = PdfPCell.NO_BORDER;
 
                 // ---------- COLUMNA 1: LOGO ----------
-                string rutaLogo = Application.StartupPath + @"\Facturas\Empresa\LOGO.jpg";
+                string rutaLogo = Application.StartupPath + @"\Facturas\Empresa\LOGO.png";
                 PdfPCell celdaLogo;
 
                 if (File.Exists(rutaLogo))
@@ -434,8 +434,8 @@ namespace Sistema_GestionFacturacion.Formularios
                 Paragraph infoEmp = new Paragraph("", fuentePequena);
                 infoEmp.Alignment = Element.ALIGN_CENTER;
                 infoEmp.Add("RTN: 0401000000000000\n");
-                infoEmp.Add("Col. Miraflores, Tegucigalpa, Honduras\n");
-                infoEmp.Add("Tel: 2234-5678 | Email: contacto@nexoratech.hn\n");
+                infoEmp.Add("UCENM, 13 Avenida S, San Pedro Sula, Cortés, Honduras\n");
+                infoEmp.Add("Tel: 2234-5678 | Email: contacto@tecnohogar.hn\n");
 
                 celdaEmpresa.AddElement(titulo);
                 celdaEmpresa.AddElement(infoEmp);

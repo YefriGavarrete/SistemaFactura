@@ -36,6 +36,7 @@ namespace Sistema_GestionFacturacion.Formularios
             nombreUsuario = nombre ?? string.Empty;
             apellidoUsuario = apellido ?? string.Empty;
             this.IsMdiContainer = true;
+
             bienvenidaUsuario(nombre, apellido, rol);
             configuracionRol(rol);
         }

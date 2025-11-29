@@ -49,13 +49,24 @@ namespace Sistema_GestionFacturacion.Formularios
         }
         void LimpiarCampos()
         {
-            txtIdEmpleado.Clear();
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDNI.Clear();
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LimpiarCampos));
+                return;
+            }
+            txtIdEmpleado.Text = string.Empty;
+            txtIdEmpleado.DefaultText = string.Empty;
+
+            txtNombre.Text = string.Empty;
+            txtNombre.DefaultText = string.Empty;
+            txtApellido.DefaultText = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtDNI.DefaultText = string.Empty;
+            txtDNI.Text = string.Empty;
             cmbCargo.SelectedIndex = -1;
-            
+            cmbCargo.SelectedItem = null;
         }
+
         void HabilitarNuevosRegistros(bool valor)
         {
             btnGuardarRegistro.Enabled = valor;
@@ -66,6 +77,7 @@ namespace Sistema_GestionFacturacion.Formularios
             cmbCargo.Enabled = valor;
             btnNuevoRegistro.Enabled = !valor;
         }
+
         void GuardarEmpleado()
         {
             string nombreEmpleado= txtNombre.Text.Trim();
@@ -314,13 +326,19 @@ namespace Sistema_GestionFacturacion.Formularios
             colorColumnaEstado();
         }
 
-        private void rbDatosActivos_CheckedChanged(object sender, EventArgs e)
+        void Filtrando()
         {
-            if (rbDatosActivos.Checked)
-            {
-                MostrarRegistros("Activo");
-            }
+            string texto = txtFiltrar.Text.Trim();
 
+            DataTable dt = dgvDatos.DataSource as DataTable;
+            if (dt != null)
+            {
+                dt.DefaultView.RowFilter =
+                    $"Convert(NombreEmpleado, 'System.String') LIKE '%{texto}%' OR " +
+                    $"ApellidoEmpleado LIKE '%{texto}%' OR " +
+                    $"DNI LIKE '%{texto}%'";
+            }
+            colorColumnaEstado();
         }
 
         private void FormEmpleado_Load(object sender, EventArgs e)
@@ -329,14 +347,6 @@ namespace Sistema_GestionFacturacion.Formularios
 
         }
 
-        private void rbDatosInactivos_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (rbDatosInactivos.Checked)
-            {
-                MostrarRegistros("Inactivo");
-            }
-
-        }
         private void btnDesactivarRegistro_Click_1(object sender, EventArgs e)
         {
             ActivarDesactivarRegistro("Activo", "Inactivo");
@@ -348,14 +358,35 @@ namespace Sistema_GestionFacturacion.Formularios
 
         }
 
-        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvDatos_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             EnviarDatosParaEditar(e);
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void rbDatosActivos_CheckedChanged(object sender, EventArgs e)
         {
-            this.Close();
+            if (rbDatosActivos.Checked)
+            {
+                MostrarRegistros("Activo");
+            }
+        }
+
+        private void rbDatosInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbDatosInactivos.Checked)
+            {
+                MostrarRegistros("Inactivo");
+            }
+        }
+
+        private void txtFiltrar_TextChanged_1(object sender, EventArgs e)
+        {
+            Filtrando();
         }
     }
 }
