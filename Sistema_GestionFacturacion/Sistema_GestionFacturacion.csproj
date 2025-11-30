@@ -87,6 +87,12 @@
     <Compile Include="Formularios\FormDescuentos.Designer.cs">
       <DependentUpon>FormDescuentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormDetallesPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormDetallesPedido.Designer.cs">
+      <DependentUpon>FormDetallesPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="Formularios\FormHistorialFacturas.Designer.cs">
       <DependentUpon>FormHistorialFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormHistorialPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormHistorialPedidos.Designer.cs">
+      <DependentUpon>FormHistorialPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormMenu.cs">
       <SubType>Form</SubType>
@@ -161,11 +173,17 @@
     <EmbeddedResource Include="Formularios\FormDescuentos.resx">
       <DependentUpon>FormDescuentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormDetallesPedido.resx">
+      <DependentUpon>FormDetallesPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormEmpleado.resx">
       <DependentUpon>FormEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormHistorialFacturas.resx">
       <DependentUpon>FormHistorialFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormHistorialPedidos.resx">
+      <DependentUpon>FormHistorialPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

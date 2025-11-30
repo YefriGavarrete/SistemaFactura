@@ -287,5 +287,11 @@ namespace Sistema_GestionFacturacion.Formularios
             var form = new FormHistorialFacturas();
             AbrirFormHijo(form);
         }
+
+        private void btnHistorialPedidos_Click(object sender, EventArgs e)
+        {
+            var form = new FormHistorialPedidos();
+            AbrirFormHijo(form);
+        }
     }
 }

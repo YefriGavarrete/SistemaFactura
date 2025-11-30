@@ -32,6 +32,7 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnRegresar = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +46,6 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnCargos = new Guna.UI2.WinForms.Guna2Button();
             this.btnDescuento = new Guna.UI2.WinForms.Guna2Button();
             this.btnCategorias = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -69,6 +69,20 @@ namespace Sistema_GestionFacturacion.Formularios
             this.panelHeader.ShadowDecoration.Depth = 8;
             this.panelHeader.Size = new System.Drawing.Size(853, 87);
             this.panelHeader.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(33, 9);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(85, 69);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 28;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lblBienvenida
             // 
@@ -216,6 +230,7 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnHistorialPedidos.Text = "HISTORIAL PEDIDOS";
             this.btnHistorialPedidos.TextOffset = new System.Drawing.Point(0, 10);
             this.btnHistorialPedidos.Tile = true;
+            this.btnHistorialPedidos.Click += new System.EventHandler(this.btnHistorialPedidos_Click);
             // 
             // btnPedidos
             // 
@@ -366,20 +381,6 @@ namespace Sistema_GestionFacturacion.Formularios
             this.btnCategorias.TextOffset = new System.Drawing.Point(0, 10);
             this.btnCategorias.Tile = true;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(33, 9);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(85, 69);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 28;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2CirclePictureBox1
             // 
