@@ -142,6 +142,16 @@ namespace Sistema_GestionFacturacion.Formularios
             //txtTotal.Text = $"{total:C4}";
         }
 
+        bool ValidarDNI()
+        {
+            if (!txtDNI.Text.All(char.IsDigit) || txtDNI.Text.Length != 13)
+            {
+                Alertas.Advertencia("El numero de DNI debe tener exactamente 13 digitos numericos.");
+                return false;
+            }
+
+            return true;
+        }
 
         //  metodo para crear un nuevo pedido y obtener su IdPedido
         void CrearPedido()
@@ -159,6 +169,9 @@ namespace Sistema_GestionFacturacion.Formularios
                 Alertas.Advertencia("Por favor, complete los datos del cliente.");
                 return;
             }
+
+            if (!ValidarDNI())
+                return;
 
             string fecha = Fecha.ToString(fechaSQL);
 
@@ -402,7 +415,7 @@ namespace Sistema_GestionFacturacion.Formularios
                 tablaEncabezado.DefaultCell.Border = PdfPCell.NO_BORDER;
 
                 // ---------- COLUMNA 1: LOGO ----------
-                string rutaLogo = Application.StartupPath + @"\Facturas\Empresa\LOGO.png";
+                string rutaLogo = Application.StartupPath + @"\Imagenes\LogoEmpresa.png";
                 PdfPCell celdaLogo;
 
                 if (File.Exists(rutaLogo))
@@ -540,7 +553,7 @@ namespace Sistema_GestionFacturacion.Formularios
                 tablaProductos.SetWidths(new float[] { 1f, 2f, 1f, 1f, 1f, 1f });
 
                 // Encabezados de tabla con estilo
-                iTextSharp.text.BaseColor colorEncabezado = new iTextSharp.text.BaseColor(70, 130, 180);
+                iTextSharp.text.BaseColor colorEncabezado = new iTextSharp.text.BaseColor(44, 75, 245);
                 string[] encabezados = { "Codigo", "Producto", "Precio Unitario", "Descuento", "Subtotal", "Total" };
                 foreach (string encabezado in encabezados)
                 {

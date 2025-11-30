@@ -335,7 +335,7 @@
             this.txtDNI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtDNI.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtDNI.ForeColor = System.Drawing.Color.Gray;
-            this.txtDNI.Location = new System.Drawing.Point(25, 315);
+            this.txtDNI.Location = new System.Drawing.Point(26, 324);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.PlaceholderText = "";
@@ -349,7 +349,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 296);
+            this.label6.Location = new System.Drawing.Point(22, 305);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 17);
             this.label6.TabIndex = 78;
@@ -512,7 +512,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEmpleado";
-            this.Text = "FormEmpleado";
+            this.Text = "Gestion de Empleados";
             this.Load += new System.EventHandler(this.FormEmpleado_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

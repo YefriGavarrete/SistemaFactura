@@ -81,7 +81,6 @@ namespace Sistema_GestionFacturacion.Formularios
                 dgvDatos.DataSource = dt;
                 dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvDatos.Refresh();
-
                 colorColumnaEstado();
             }
             catch (Exception ex)
@@ -98,12 +97,13 @@ namespace Sistema_GestionFacturacion.Formularios
             {
                 try
                 {
+                    int IDROL = int.Parse(txtIdRol.Text.Trim());
                     string Roles = txtRoles.Text.Trim();
                     string estado = lblEstado.Text.Trim();
                     string actualizar = $"Rol = '{Roles}', " +
                          $"Estado = '{estado}'";
 
-                    string condicion = $"Rol='{Roles}'";
+                    string condicion = $"IdRol='{IDROL}'";
 
                     if (consulta.update("Roles", actualizar, condicion) > 0)
                     {
@@ -297,6 +297,11 @@ namespace Sistema_GestionFacturacion.Formularios
             {
                 MostrarRegistros("Inactivo");
             }
+        }
+
+        private void FormRoles_Load(object sender, EventArgs e)
+        {
+            MostrarRegistros("Activo");
         }
     }
 }

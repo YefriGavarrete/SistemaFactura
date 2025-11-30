@@ -78,6 +78,17 @@ namespace Sistema_GestionFacturacion.Formularios
             btnNuevoRegistro.Enabled = !valor;
         }
 
+        bool ValidarDNI()
+        {
+            if (!txtDNI.Text.All(char.IsDigit) || txtDNI.Text.Length != 13)
+            {
+                Alertas.Advertencia("El numero de DNI debe tener exactamente 13 digitos numericos.");
+                return false;
+            }
+
+            return true;
+        }
+
         void GuardarEmpleado()
         {
             string nombreEmpleado= txtNombre.Text.Trim();
@@ -93,6 +104,10 @@ namespace Sistema_GestionFacturacion.Formularios
                 Alertas.Advertencia("Por favor, complete todos los campos antes de registrar.");
                 return;
             }
+
+            if (!ValidarDNI())
+                return;
+
             if (selectedCargo== null || !int.TryParse(selectedCargo.ToString(), out int cargo))
             {
                 Alertas.Advertencia("Por favor, seleccione un Cargo válido.");
@@ -188,6 +203,9 @@ namespace Sistema_GestionFacturacion.Formularios
                     string apellidoEmpleado = txtApellido.Text.Trim();
                     string DNI = txtDNI.Text.Trim();
                     object selectedCargo = cmbCargo.SelectedValue;
+
+                    if (!ValidarDNI())
+                        return;
 
                     if (selectedCargo == null || !int.TryParse(selectedCargo.ToString(), out int idcargo))
                     {

@@ -599,7 +599,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBuscarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Buscar Productos";
+            this.Text = "Agregando Productos";
             this.Load += new System.EventHandler(this.FormBuscarProductos_Load);
             this.lvlAviso.ResumeLayout(false);
             this.lvlAviso.PerformLayout();

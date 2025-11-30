@@ -34,6 +34,7 @@ namespace Sistema_GestionFacturacion.Formularios
             txtCantidad.Enabled = false;
 
             cmbCategoria.Enabled = false;
+            btnEliminar.Enabled = false;
 
             CargarDescuento();
         }
@@ -107,7 +108,7 @@ namespace Sistema_GestionFacturacion.Formularios
             txtDescripcion.Enabled = valor;
             txtPrecio.Enabled = valor;
             txtCantidad.Enabled = valor;
-            btnNuevoRegistro.Enabled = !valor;
+            btnNuevoRegistro.Enabled = !valor;           
         }
 
         void GuardarProducto()
@@ -219,6 +220,8 @@ namespace Sistema_GestionFacturacion.Formularios
                 }
 
                 HabilitarNuevosRegistros(true);
+                btnEliminar.Enabled = true;
+
 
                 // Configurar visibilidad y habilitación de botones según el estado
                 /*  if (lblEstado.Text == "Activo")
@@ -282,6 +285,7 @@ namespace Sistema_GestionFacturacion.Formularios
                         MostrarRegistros($"Stock > 0");
                         HabilitarNuevosRegistros(false);                        
                         rbConStock.Checked = true;
+                        btnEliminar.Enabled = false;
                     }
                     else
                     {
@@ -337,7 +341,7 @@ namespace Sistema_GestionFacturacion.Formularios
         {
             limpiarCampos();
             HabilitarNuevosRegistros(false);
-            
+            btnEliminar.Enabled = false;
         }
 
         private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -388,6 +392,9 @@ namespace Sistema_GestionFacturacion.Formularios
                 consulta.Eliminar("Productos", condicion.ToString());
                 Alertas.Realizado("El producto se elimino con exito");
                 MostrarRegistros($"Stock > 0");
+                limpiarCampos();
+                HabilitarNuevosRegistros(false);
+                btnEliminar.Enabled = false;
             }
 
         }

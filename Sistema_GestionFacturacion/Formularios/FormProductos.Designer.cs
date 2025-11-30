@@ -616,8 +616,9 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormProductos";
-            this.Text = "FormProductos";
+            this.Text = "Gestion de Productos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

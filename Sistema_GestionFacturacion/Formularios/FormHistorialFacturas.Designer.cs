@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHistorialFacturas));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dgvdatos = new System.Windows.Forms.DataGridView();
             this.txtFiltrar = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.dgvdatos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -61,17 +61,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(812, 354);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // dgvdatos
-            // 
-            this.dgvdatos.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvdatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdatos.Location = new System.Drawing.Point(15, 43);
-            this.dgvdatos.Name = "dgvdatos";
-            this.dgvdatos.Size = new System.Drawing.Size(779, 298);
-            this.dgvdatos.TabIndex = 5;
-            this.dgvdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdatos_CellContentClick);
-            // 
             // txtFiltrar
             // 
             this.txtFiltrar.BackColor = System.Drawing.Color.Transparent;
@@ -80,7 +69,6 @@
             this.txtFiltrar.BorderThickness = 0;
             this.txtFiltrar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFiltrar.DefaultText = "";
-            this.txtFiltrar.Enabled = false;
             this.txtFiltrar.FillColor = System.Drawing.Color.WhiteSmoke;
             this.txtFiltrar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtFiltrar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
@@ -105,6 +93,17 @@
             this.label10.Size = new System.Drawing.Size(45, 17);
             this.label10.TabIndex = 79;
             this.label10.Text = "Filtrar";
+            // 
+            // dgvdatos
+            // 
+            this.dgvdatos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvdatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvdatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdatos.Location = new System.Drawing.Point(15, 43);
+            this.dgvdatos.Name = "dgvdatos";
+            this.dgvdatos.Size = new System.Drawing.Size(779, 298);
+            this.dgvdatos.TabIndex = 5;
+            this.dgvdatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdatos_CellContentClick);
             // 
             // label1
             // 
@@ -204,9 +203,10 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHistorialFacturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormHistorialFacturas";
+            this.Text = "Historial de Facturas";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdatos)).EndInit();

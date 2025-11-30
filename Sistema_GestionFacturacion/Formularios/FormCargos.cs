@@ -345,5 +345,10 @@ namespace Sistema_GestionFacturacion.Formularios
                 MostrarRegistros("Inactivo");
             }
         }
+
+        private void FormCargos_Load(object sender, EventArgs e)
+        {
+            MostrarRegistros("Activo");
+        }
     }
 }

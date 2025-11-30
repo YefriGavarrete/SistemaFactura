@@ -47,16 +47,16 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtFiltrar = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescuento = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdDescuento = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.lblOperacion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblOperacion = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -284,6 +284,18 @@
             this.guna2Panel2.Size = new System.Drawing.Size(313, 300);
             this.guna2Panel2.TabIndex = 62;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(85, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 28);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Descuento";
+            // 
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.Transparent;
@@ -383,6 +395,18 @@
             this.lblEstado.TabIndex = 72;
             this.lblEstado.Text = "Estado";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(21, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "IdDescuento";
+            // 
             // lblOperacion
             // 
             this.lblOperacion.AutoSize = true;
@@ -396,36 +420,12 @@
             this.lblOperacion.Text = "Operacion";
             this.lblOperacion.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "IdDescuento";
-            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.BorderRadius = 10;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(85, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 28);
-            this.label4.TabIndex = 66;
-            this.label4.Text = "Descuento";
             // 
             // FormDescuentos
             // 
@@ -441,7 +441,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDescuentos";
-            this.Text = "Descuentos";
+            this.Text = "Gestion de Descuentos";
             this.Load += new System.EventHandler(this.FormDescuentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.menuStrip1.ResumeLayout(false);

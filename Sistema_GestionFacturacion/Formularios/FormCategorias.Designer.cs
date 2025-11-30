@@ -403,7 +403,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCategorias";
-            this.Text = "Categorias";
+            this.Text = "Gestion de Categorias";
             this.Load += new System.EventHandler(this.FormCategorias_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -200,7 +200,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(64, 27);
+            this.label4.Location = new System.Drawing.Point(111, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 28);
             this.label4.TabIndex = 73;
@@ -403,7 +403,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRoles";
-            this.Text = "Roles";
+            this.Text = "Gestion de Roles";
+            this.Load += new System.EventHandler(this.FormRoles_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);

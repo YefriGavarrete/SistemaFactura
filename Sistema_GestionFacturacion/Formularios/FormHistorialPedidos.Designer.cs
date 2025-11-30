@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHistorialPedidos));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.rbFacturados = new System.Windows.Forms.RadioButton();
             this.txtFiltrar = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.rbCancelados = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -56,30 +54,14 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.Controls.Add(this.rbFacturados);
             this.guna2Panel1.Controls.Add(this.txtFiltrar);
             this.guna2Panel1.Controls.Add(this.dgvDatos);
-            this.guna2Panel1.Controls.Add(this.rbCancelados);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.FillColor = System.Drawing.SystemColors.Highlight;
             this.guna2Panel1.Location = new System.Drawing.Point(32, 115);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(857, 426);
             this.guna2Panel1.TabIndex = 67;
-            // 
-            // rbFacturados
-            // 
-            this.rbFacturados.AutoSize = true;
-            this.rbFacturados.BackColor = System.Drawing.Color.Transparent;
-            this.rbFacturados.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFacturados.ForeColor = System.Drawing.Color.White;
-            this.rbFacturados.Location = new System.Drawing.Point(722, 22);
-            this.rbFacturados.Name = "rbFacturados";
-            this.rbFacturados.Size = new System.Drawing.Size(93, 21);
-            this.rbFacturados.TabIndex = 79;
-            this.rbFacturados.TabStop = true;
-            this.rbFacturados.Text = "Facturados";
-            this.rbFacturados.UseVisualStyleBackColor = false;
             // 
             // txtFiltrar
             // 
@@ -104,10 +86,10 @@
             // 
             // dgvDatos
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -121,20 +103,6 @@
             this.dgvDatos.Size = new System.Drawing.Size(821, 357);
             this.dgvDatos.TabIndex = 56;
             this.dgvDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellDoubleClick);
-            // 
-            // rbCancelados
-            // 
-            this.rbCancelados.AutoSize = true;
-            this.rbCancelados.BackColor = System.Drawing.Color.Transparent;
-            this.rbCancelados.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCancelados.ForeColor = System.Drawing.Color.White;
-            this.rbCancelados.Location = new System.Drawing.Point(610, 22);
-            this.rbCancelados.Name = "rbCancelados";
-            this.rbCancelados.Size = new System.Drawing.Size(95, 21);
-            this.rbCancelados.TabIndex = 60;
-            this.rbCancelados.TabStop = true;
-            this.rbCancelados.Text = "Cancelados";
-            this.rbCancelados.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -246,8 +214,9 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHistorialPedidos";
-            this.Text = "FormHistorialPedidos";
+            this.Text = "Historial de Pedidos";
             this.Load += new System.EventHandler(this.FormHistorialPedidos_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -267,9 +236,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtFiltrar;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.RadioButton rbCancelados;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton rbFacturados;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label1;
