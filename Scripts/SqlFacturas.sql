@@ -1,3 +1,4 @@
+--Table Facturas
 USE SistemaGestionFacturacion
 IF OBJECT_ID('dbo.Facturas', 'U') IS NULL
 BEGIN
@@ -11,10 +12,14 @@ BEGIN
         ApelidoCliente NVARCHAR(100) NOT NULL,      
         DNI NVARCHAR(20) NOT NULL,
         Total DECIMAL(18, 2) NOT NULL,
+        [PDF] [varbinary](max) NULL,
         CONSTRAINT FK_Facturas_Pedidos FOREIGN KEY (IdPedido)
             REFERENCES dbo.Pedidos (IdPedido)
             ON DELETE NO ACTION,
     );
 END;
 GO
+
+
+SELECT * FROM dbo.Facturas
 

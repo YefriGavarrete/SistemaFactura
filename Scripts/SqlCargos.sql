@@ -1,5 +1,6 @@
-
 USE SistemaGestionFacturacion
+
+--Table Cargos
 IF OBJECT_ID('dbo.Cargos', 'U') IS NULL
 BEGIN
     CREATE TABLE dbo.Cargos (
@@ -10,5 +11,4 @@ BEGIN
 END;
 GO
 
-USE  SistemaGestionFacturacion
-select * from dbo.Cargos
+SELECT * FROM dbo.Cargos

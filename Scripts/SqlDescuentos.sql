@@ -1,3 +1,4 @@
+--TABLE Descuento
 USE SistemaGestionFacturacion
 IF OBJECT_ID('dbo.Descuento', 'U') IS NULL
 BEGIN
@@ -12,4 +13,4 @@ END;
 GO
 SELECT * FROM dbo.Descuento
 
-    
+

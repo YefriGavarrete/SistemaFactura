@@ -1,3 +1,4 @@
+--Tabla Categorias
 USE SistemaGestionFacturacion
 IF OBJECT_ID('dbo.Categorias','U') IS NULL
 BEGIN
@@ -10,3 +11,4 @@ END;
 GO
 
 SELECT * FROM dbo.Categorias
+

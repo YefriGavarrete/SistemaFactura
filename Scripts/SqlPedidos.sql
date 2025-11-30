@@ -1,3 +1,4 @@
+--	Tabla Pedidos
 USE SistemaGestionFacturacion    
 
 IF OBJECT_ID('dbo.Pedidos', 'U') IS NULL
@@ -12,6 +13,9 @@ BEGIN
         NombreEmpleado NVARCHAR(100) NULL, 
         ApellidoEmpleado NVARCHAR(100) NULL, 
         Estado NVARCHAR(15) NOT NULL DEFAULT ('Activo'),
+        MetodoPago VARCHAR(50) NOT NULL DEFAULT 'Pendiente',
+        MontoPagado DECIMAL(20, 4) NOT NULL DEFAULT 0
+
         CONSTRAINT FK_Pedidos_Empleados FOREIGN KEY (IdEmpleado)
             REFERENCES dbo.Empleados (IdEmpleado)
             ON UPDATE NO ACTION
@@ -19,3 +23,6 @@ BEGIN
     );
 END;
 GO
+
+SELECT * FROM dbo.Pedidos
+

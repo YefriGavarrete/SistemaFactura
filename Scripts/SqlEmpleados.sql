@@ -1,3 +1,4 @@
+--TABLE EMPLEADOS
 USE SistemaGestionFacturacion
 
 IF OBJECT_ID('dbo.Empleados', 'U') IS NULL
@@ -8,6 +9,7 @@ BEGIN
         ApellidoEmpleado NVARCHAR(100) NOT NULL,
         IdCargo INT NOT NULL,
         DNI NVARCHAR(20) NULL,
+        Estado VARCHAR(15) NOT NULL DEFAULT ('Activo')
         CONSTRAINT FK_Empleados_Cargos FOREIGN KEY (IdCargo)
             REFERENCES dbo.Cargos (IdCargo)
             ON UPDATE NO ACTION
@@ -16,10 +18,4 @@ BEGIN
 END;
 GO
 
-USE  SistemaGestionFacturacion
-IF COL_LENGTH('dbo.Empleados', 'Estado') IS NULL
-    BEGIN
-        ALTER TABLE dbo.Empleados
-        ADD Estado VARCHAR(15) NOT NULL DEFAULT ('Activo');
-       
-END;
+SELECT * FROM dbo.Empleados

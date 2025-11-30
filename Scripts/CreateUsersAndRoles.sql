@@ -1,4 +1,4 @@
-
+--Table Usuarios
 Use SistemaGestionFacturacion
 IF OBJECT_ID('dbo.Usuarios','U') IS NULL
 BEGIN
@@ -21,5 +21,5 @@ BEGIN
 END;
 GO
 
-Use SistemaGestionFacturacion
+
 SELECT * FROM dbo.Usuarios
